@@ -1,4 +1,4 @@
-Glassware for PressLabs
+Neon
 ===
 
 The documentation will be here soon.
