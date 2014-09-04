@@ -1,0 +1,237 @@
+@import "settings";
+
+$form-option-size: rem-calc(17);
+
+$form-checkbox-content: map_get($icons, "icon_cog");
+$form-radio-content: map_get($icons, "icon_cog");
+$form-option-font-family: 'icomoon4';
+
+$form-option-padding: 0 0 0 4px;
+
+@mixin form-option-label-content($content: $form-option-default-content, $color: $body-font-color) {
+    content: $content;
+    font-family: $form-option-font-family;
+    color: $color;
+    padding: $form-option-padding;
+}
+
+@mixin form-option-base($type: "checkbox", $inline: false) {
+    @if $inline == true {
+        display: inline-block;
+    } @else {
+        display: block;
+    }
+    padding-left: $form-spacing;
+    margin-bottom: $form-spacing;        
+
+    input[type=#{$type}] {
+        display: none;
+
+        &:checked + label:after{
+            font-size: rem-calc(10);
+            @if $type == "checkbox" {
+                @include form-option-label-content($form-checkbox-content, $body-font-color);
+            }
+            @else if $type == "radio" {
+                @include form-option-label-content($form-radio-content, $body-font-color);
+            }
+        }
+
+        &:disabled + label {
+          opacity: 0.65;
+
+          &:before {
+            background-color: #fff;
+            cursor: not-allowed;
+          }
+        }
+    }
+}
+
+@mixin form-option-label {
+  label {
+    display: inline-block;
+    position: relative;
+    padding-left: rem-calc(-5);
+    line-height: $form-option-size;
+    
+    &:before {
+      content: " ";
+      display: inline-block;
+      position: absolute;
+      width: $form-option-size;
+      height: $form-option-size;
+      top: 0;
+      left: 0;
+      margin-left: rem-calc(-20);
+      border: $input-border-width $input-border-style $input-border-color;
+      background-color: #fff;
+    }
+    
+    &:after {
+      display: inline-block;
+      position: absolute;
+      width: $form-option-size;
+      height: $form-option-size;
+      left: 0;
+      top: 0;
+      margin-left: rem-calc(-20);
+      color: $input-border-color;
+    }
+
+  }
+}
+
+@include exports("forms") {
+
+    select, input, textarea {
+      border-radius: $global-radius;
+    }
+
+    // .checkbox {
+    //     @include form-option-base("checkbox");
+    //     @include form-option-label;
+    //     &.inline {
+    //         display: inline-block;
+    //     }
+    //     label:before {
+    //         border-radius: $input-border-radius;
+    //     }
+    // }
+
+    // .radio {
+    //     @include form-option-base("radio");
+    //     @include form-option-label;
+    //     &.inline {
+    //         display: inline-block;
+    //     }
+    //     label:before {
+    //         border-radius: 50%;
+    //     }
+    // }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="date"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="month"],
+    input[type="week"],
+    input[type="email"],
+    input[type="number"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="time"],
+    input[type="url"],
+    input[type="submit"],
+    button, select, .button {
+        border-radius: $input-border-radius;
+        @include no-transition();
+    }
+
+    .group {
+        display: table;
+        margin-bottom: $form-spacing;
+        vertical-align: middle;
+        width: 100%;
+
+        > input {
+            margin: 0;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="date"],
+        input[type="datetime"],
+        input[type="datetime-local"],
+        input[type="month"],
+        input[type="week"],
+        input[type="email"],
+        input[type="number"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="time"],
+        input[type="url"] {
+            display: table-cell;
+            box-sizing: border-box;
+            margin-bottom: 0;
+            vertical-align: middle;
+            &:not(:first-child) {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+            &:not(:last-child) {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            &:not(:first-child):not(:last-child) {
+                border-radius: 0;
+            }
+        }
+
+    sup, sub {
+        display: table-cell;
+        box-sizing: border-box;
+        width: 1%;
+        vertical-align: middle;
+        font-size: inherit;
+        padding: 0;
+        position: relative;
+        top: 0;
+        bottom: 0;
+        > i,
+        > span {
+            padding: $form-spacing/2 $form-spacing;
+            display: block;
+            margin: 0px;
+            line-height: rem-calc(21);
+            white-space: nowrap;
+        }
+        > i:after,
+        > span:after {
+            background: $input-prefix-bg;
+            border: $input-prefix-border-size $input-prefix-border-type $input-prefix-border-color;
+            border-radius: $input-border-radius;
+            content: " ";
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        button, .button {
+            margin: 0;
+            padding: $form-spacing/2 $form-spacing;
+            line-height: rem-calc(21);
+        }
+    }
+
+    sup {
+            i:after,
+            span:after {
+                border-right: none;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            .button, button, input[type="submit"] {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+    sub {
+            i:after,
+            span:after {
+                border-left: none;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+            .button, button, input[type="submit"] {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+    }
+}

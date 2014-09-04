@@ -1,0 +1,19 @@
+//
+// GLASSWARE Functions
+//
+
+@mixin no-transition() {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    -ms-transition: none !important;
+    transition: none !important;    
+}
+
+$modules: () !default;
+@mixin exports($name) {
+  @if(not index($modules, $name)) {
+    $modules: append($modules, $name) !global;
+    @content;
+  }
+}

@@ -1,0 +1,71 @@
+@import "settings";
+
+@mixin tabs-dynamics($color) {
+  border-color: scale-color(map_get(map_get($brandColors, $color), "normal"), $lightness: 80%);
+  .tab-title > a {
+        background-color: scale-color(map_get(map_get($brandColors, $color), "normal"), $lightness: 80%);
+        color: map_get(map_get($brandColors, $color), "dark");
+        &:hover {
+            background-color: map_get(map_get($brandColors, $color), "light");
+        }
+        &:active {
+            background-color: map_get(map_get($brandColors, $color), "dark");
+            color: scale-color(map_get(map_get($brandColors, $color), "normal"), $lightness: 80%);
+        }
+    }
+    .tab-title.active > a {
+        background-color: map_get(map_get($brandColors, $color), "normal");
+        color: scale-color(map_get(map_get($brandColors, $color), "normal"), $lightness: 80%);
+    }
+}
+
+@include exports("tabs") {
+    .tabs {
+        @include tabs-dynamics("green");
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        margin-bottom: rem-calc(20) !important;
+        li:before {
+            content: "";margin: 0; padding: 0;
+        }
+        .tab-title {
+            position: relative;
+            margin-bottom: -1px !important;
+            > a {
+                border-radius: 0px;
+            }
+            &:first-child > a {
+                border-top-left-radius: $global-radius;
+            }
+            &:last-child > a {
+                border-top-right-radius: $global-radius;
+            }
+        }
+        &:not(.vertical) .tab-title.active > a {
+            border-bottom-color: transparent;
+        }
+        &.vertical {
+            .tab-title {
+                position: relative;
+                margin-bottom: 0px !important;
+                margin-right: -1px !important;
+                &.active > a {
+                    border-right-color: transparent;
+                }
+                &:first-child > a {
+                    border-top-left-radius: $global-radius;
+                }
+                &:last-child > a {
+                    border-bottom-left-radius: $global-radius;
+                }
+            }
+        }
+    }
+    .tab-vertical-container {
+        margin-bottom: $tabs-content-margin-bottom;
+        @include clearfix;
+        .tabs-content.vertical {
+            margin-bottom: 0;
+        }
+    }
+}

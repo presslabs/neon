@@ -1,0 +1,127 @@
+@import "settings";
+
+$syntax-html-color: "green";
+$syntax-css-color: "gray";
+$syntax-js-color: "blue";
+$syntax-py-color: "orange";
+$syntax-sass-color: "orange";
+
+@mixin syntax-base($color) {
+  background-color: scale-color(map_get(map_get($brandColors, $color), "normal"), $lightness: 95%);
+  border-color: scale-color(map_get(map_get($brandColors, $color), "normal"), $lightness: 50%);
+  color: #000; //map_get(map_get($brandColors, $color), "dark");
+}
+
+
+@mixin syntax-colors($base, $keyword, $string, $attribute, $class, $number, $comment, $default) {
+  @include syntax-base($base);
+
+  .hljs {
+    color: map_get(map_get($brandColors, $default), "dark");
+  }
+
+  .hljs-comment, .hljs-template_comment, .diff .hljs-header, .hljs-javadoc {
+    color: scale-color(map_get(map_get($brandColors, $comment), "normal"), $lightness: 50%);
+  }
+
+  .hljs-keyword, .css .rule .hljs-keyword, .hljs-winutils, .javascript .hljs-title, .nginx .hljs-title, .hljs-subst, .hljs-request, .hljs-status {
+    color: map_get(map_get($brandColors, $keyword), "light");
+  }
+
+  .hljs-number, .hljs-hexcolor, .ruby .hljs-constant {
+    color: map_get(map_get($brandColors, $number), "normal");
+  }
+
+  .hljs-string, .hljs-tag .hljs-value, .hljs-phpdoc, .tex .hljs-formula {
+    color: map_get(map_get($brandColors, $string), "normal");
+  }
+
+  .hljs-title, .hljs-id, .coffeescript .hljs-params, .scss .hljs-preprocessor {
+    color: map_get(map_get($brandColors, $string), "normal");
+  }
+
+  .hljs-class .hljs-title, .haskell .hljs-type, .vhdl .hljs-literal, .tex .hljs-command {
+    color: map_get(map_get($brandColors, $class), "normal");
+  }
+
+  .hljs-tag, .hljs-tag .hljs-title, .hljs-rules .hljs-property, .django .hljs-tag .hljs-keyword {
+    color: map_get(map_get($brandColors, $default), "normal");
+  }
+
+  .hljs-attribute, .hljs-variable, .lisp .hljs-body {
+    color: map_get(map_get($brandColors, $attribute), "light");
+  }
+
+  .hljs-regexp {
+    color: map_get(map_get($brandColors, $number), "light");
+  }
+
+  .hljs-symbol, .ruby .hljs-symbol .hljs-string, .lisp .hljs-keyword, .tex .hljs-special, .hljs-prompt {
+    color: map_get(map_get($brandColors, $default), "normal");
+  }
+
+  .hljs-built_in, .lisp .hljs-title, .clojure .hljs-built_in {
+    color: map_get(map_get($brandColors,  $keyword), "normal");
+  }
+
+  .hljs-preprocessor, .hljs-pragma, .hljs-pi, .hljs-doctype, .hljs-shebang, .hljs-cdata {
+    color: #999;
+  }
+
+  .hljs-deletion {
+    background: map_get(map_get($brandColors, $string), "normal");
+  }
+
+  .hljs-addition {
+    background: map_get(map_get($brandColors, $string), "normal");
+  }
+
+  .diff .hljs-change {
+    background: map_get(map_get($brandColors, $string), "normal");
+  }
+
+  .hljs-chunk {
+    color: #aaa;
+  }
+
+}
+
+@include exports("syntaxes") {
+
+  code {
+    padding: rem_calc(3) rem_calc(6);
+    border-radius: $global-radius;
+    // border-color: scale-color(map_get(map_get($brandColors, "green"), "normal"), $lightness: 70%);
+    font-size: rem_calc(14);
+  }
+
+  pre {
+    margin-bottom: $form-spacing;
+    code {
+      border-width: 1px;
+      border-style: solid;
+      border-radius: $global-radius;
+      font-size: 12px;
+      line-height: 160%;
+
+      @include syntax-colors($base: "green", $keyword: "brown", $string: "green", $attribute: "brown", $class: "blue", $number: "orange", $comment: "gray", $default: "blue");
+    }
+  }
+
+  .hljs {
+    display: block;
+    overflow-x: auto;
+    padding: $global-radius;
+  }
+
+  .hljs-comment, .hljs-template_comment, .diff .hljs-header, .hljs-javadoc {
+    font-style: italic;
+  }
+  .hljs-keyword, .css .rule .hljs-keyword, .hljs-winutils, .javascript .hljs-title, .nginx .hljs-title, .hljs-subst, .hljs-request, .hljs-status, .hljs-title, .hljs-id, .coffeescript .hljs-params, .scss .hljs-preprocessor, .hljs-class .hljs-title, .haskell .hljs-type, .vhdl .hljs-literal, .tex .hljs-command, .hljs-preprocessor, .hljs-pragma, .hljs-pi, .hljs-doctype, .hljs-shebang, .hljs-cdata {
+    font-weight: bold;
+  }
+  .javascript .hljs-title, .lisp .hljs-title, .clojure .hljs-title, .hljs-subst, .hljs-tag, .hljs-tag .hljs-title, .hljs-rules .hljs-property, .django .hljs-tag .hljs-keyword {
+    font-weight: normal;
+  }
+
+}

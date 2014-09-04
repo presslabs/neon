@@ -1,0 +1,69 @@
+@import "settings";
+
+$button-border-width: rem-calc(4);
+$button-padding: rem-calc(8);
+
+$button-primary-color: "green";
+$button-default-color: "gray";
+$button-info-color: "blue";
+$button-danger-color: "orange";
+
+@mixin button-boder($color) {
+    border-left-color: map_get(map_get($brandColors, $color), "darker");
+}
+
+@mixin button-hover-state($color) {
+    background-color: map_get(map_get($brandColors, $color), "lighter");
+    border-left-color: map_get(map_get($brandColors, $color), "normal");
+}
+
+@mixin button-active-state($color) {
+    background-color: map_get(map_get($brandColors, $color), "darker");
+    border-left-color: map_get(map_get($brandColors, $color), "lighter");
+}
+
+@mixin button-dynamics($color) {
+    background-color: map_get(map_get($brandColors, $color), "normal");
+    @include button-boder($color);
+    @include no-transition();
+    &:focus {
+        @include button-active-state($color);
+        @include no-transition();
+        outline: 0;
+    }
+    &:hover {
+        @include button-hover-state($color);
+        @include no-transition();
+        outline: 0;
+    }
+    &:active {
+        outline: 0;
+        @include button-active-state($color);
+        @include no-transition();
+    }
+}
+
+@include exports("buttons") {
+    .button, [type="submit"], button {
+        text-transform: uppercase;
+        border-left-width: $button-border-width;
+        border-left-style: solid;
+        text-transform: uppercase;
+        position: relative;
+        padding-top: $button-padding;
+        padding-left: $button-padding * 2;
+        padding-bottom: $button-padding;
+        padding-right: $button-padding * 2;
+
+        @include button-dynamics($button-primary-color);
+        &.default {
+            @include button-dynamics($button-default-color);
+        }
+        &.danger {
+            @include button-dynamics($button-danger-color);
+        }
+        &.info {
+            @include button-dynamics($button-info-color);
+        }
+    }
+}

@@ -1,0 +1,157 @@
+@import "settings";
+
+$table-primary-color: "green";
+
+$table-text-color: map_get(map_get($brandColors, $table-primary-color), "dark");
+$table-border-color: scale-color(map_get(map_get($brandColors, $table-primary-color), "normal"), $lightness: 80%);
+$table-strip-color: scale-color(map_get(map_get($brandColors, $table-primary-color), "normal"), $lightness: 95%);
+$table-hover-color: scale-color(map_get(map_get($brandColors, $table-primary-color), "normal"), $lightness: 80%);
+$table-caption-border: 3px solid map_get(map_get($brandColors, $table-primary-color), "dark");
+
+@mixin set-border($position: "top", $color: red) {
+    border-#{$position}: 1px solid $color;
+}
+
+@include exports("tables") {
+    table {
+        border-color: $table-border-color;
+        border: none;
+        border-collapse: separate;
+        border-radius: $global-radius;
+        margin-bottom: rem-calc(16);
+        font-size: rem-calc(14);
+        line-height: rem-calc(18);
+
+        caption {
+            background-color: $table-border-color;
+            color: $table-text-color;
+            line-height: 48px;
+            text-align: left;
+            border-bottom: $table-caption-border;
+            border-top-left-radius: $global-radius;
+            border-top-right-radius: $global-radius;
+            i {
+                background-color: $table-text-color;
+                border-bottom: $table-caption-border;
+                width: 48px;
+                height: 48px;
+                margin: 0 16px 0 0;
+                vertical-align: top;
+                display: inline-block;
+                text-align: center;
+                padding-top: 16px;
+                border-top-left-radius: $global-radius;
+                top: 0;
+                color: $table-border-color;
+            }
+        }
+
+        thead {
+            tr th {
+                font-size: 18px;
+                @include set-border("right", $table-border-color);
+                color: $table-text-color;
+                line-height: 24px;
+                background-color: #fff;
+                &:first-child {
+                    @include set-border("left", $table-border-color);
+                }
+            }
+            &:first-child tr {
+                th {
+                    @include set-border("top", $table-border-color);
+                }
+                th:first-child {
+                    @include set-border("left", $table-border-color);
+                    border-top-left-radius: $global-radius;
+                }
+                th:last-child {
+                    border-top-right-radius: $global-radius;
+                }
+            }
+        }
+
+        tbody, tfoot {
+            tr {
+                background-color: transparent !important;
+                td {
+                    @include set-border("right", $table-border-color);
+                    @include set-border("top", $table-border-color);
+                    &:first-child {
+                        @include set-border("left", $table-border-color);
+                    }
+                }
+                &:last-child td {
+                    @include set-border("bottom", $table-border-color);
+                    &:first-child {
+                        border-bottom-left-radius: $global-radius !important;
+                    }
+                    &:last-child {
+                        border-bottom-right-radius: $global-radius !important;
+                    }
+                }
+            }
+        }
+        td, th {
+            padding: rem-calc(8 10 10);
+            text-align: left;
+        }
+        &.stripped {
+            tbody tr {
+                &.even,
+                &.alt,
+                &:nth-of-type(even) { 
+                    td {
+                        background-color: $table-strip-color;
+                    }
+                }
+            }
+        }
+        &.hoverable {
+            tbody tr:hover td {
+                    background-color: $table-hover-color;
+                }
+        }
+        &.expand {
+            width: 100%;
+        }
+    }
+    .table-wrapper {
+        border-right: none;
+
+        caption {
+            background-color: $table-border-color;
+            color: $table-text-color;
+            line-height: 48px;
+            text-align: left;
+            width: 100%;
+            display: block;
+            border-bottom: $table-caption-border;
+            border-top-left-radius: $global-radius;
+            border-top-right-radius: $global-radius;
+            i {
+                background-color: $table-text-color;
+                border-bottom: $table-caption-border;
+                width: 48px;
+                height: 48px;
+                margin: 0 16px 0 0;
+                vertical-align: top;
+                display: inline-block;
+                text-align: center;
+                padding-top: 16px;
+                border-top-left-radius: $global-radius;
+                top: 0;
+                color: $table-border-color;
+            }
+        }
+        .pinned {
+            top: 51px;
+            border: none;
+        }
+        .inline-actions {
+            .button-group {
+                width: 120px;
+            }
+        }
+    }
+}

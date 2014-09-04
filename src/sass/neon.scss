@@ -1,0 +1,55 @@
+@import "settings";
+@import "functions";
+
+@import "../../bower_components/foundation/scss/foundation/components/grid";
+@import "../../bower_components/foundation/scss/foundation/components/alert-boxes";
+@import "../../bower_components/foundation/scss/foundation/components/buttons";
+@import "../../bower_components/foundation/scss/foundation/components/forms";
+@import "../../bower_components/foundation/scss/foundation/components/pagination";
+@import "../../bower_components/foundation/scss/foundation/components/tabs";
+@import "../../bower_components/foundation/scss/foundation/components/type";
+
+@import "components/typography";
+@import "components/syntaxes";
+@import "components/icons";
+@import "components/forms";
+@import "components/buttons";
+@import "components/tables";
+@import "components/tabs";
+
+.palette {
+    ul {
+        list-style: none;
+        overflow: hidden;
+        margin: 0px;
+        padding: 0px;
+        li {
+            float: left;
+            width: 20%;
+            height: 50px;
+            &:before {
+                content: "";
+            }
+        }
+    }
+    @each $colorName, $mainColor in $brandColors {
+        .#{$colorName} {
+            @each $toneName, $colorTone in $mainColor {
+                .#{$toneName} {
+                    background-color: $colorTone;
+                }
+                
+            }
+        }
+    }
+}
+
+article {
+    padding: 50px;
+    border: 1px solid #f5f5f5;
+    margin-bottom: 50px;
+}
+
+hr {
+    margin: 100px 0;
+}

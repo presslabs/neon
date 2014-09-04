@@ -1,0 +1,168 @@
+@import "settings";
+
+$alert-primary-color: "green";
+$alert-default-color: "gray";
+$alert-info-color: "blue";
+$alert-danger-color: "orange";
+
+$selectionColor: "green";
+
+@mixin alert-dynamics($color) {
+  background-color: scale-color(map_get(map_get($brandColors, $color), "normal"), $lightness: 80%);
+  color: map_get(map_get($brandColors, $color), "dark");
+  i {
+      background-color: map_get(map_get($brandColors, $color), "dark");
+      color: scale-color(map_get(map_get($brandColors, $color), "normal"), $lightness: 80%);
+  }  
+  .alert-box-content {
+    border-color: scale-color(map_get(map_get($brandColors, $color), "normal"), $lightness: 80%);
+  }
+}
+
+@mixin selection-dynamics($color) {
+  color: scale-color(map_get(map_get($brandColors, $color), "lighter"), $lightness: 75%);  background: map_get(map_get($brandColors, $color), "lighter");
+}
+
+@mixin pagination-dynamics($color) {
+  color: map_get(map_get($brandColors, $color), "dark");
+  li:not(.arrow) {
+    background-color: map_get(map_get($brandColors, $color), "dark");
+    > a {
+      background-color: #fff;
+    }
+  }
+  li.arrow {
+    background-color: map_get(map_get($brandColors, $color), "dark");
+    a {
+      color: #fff;
+    }
+  }
+  li.current a {
+    background-color: map_get(map_get($brandColors, $color), "normal");
+    color: #fff;
+  }
+  li.unavailable a {
+    background-color: transparent;
+  }
+  li:not(.unavailable) > a:not(.arrow):hover {
+    background-color: map_get(map_get($brandColors, $color), "light");
+    color: map_get(map_get($brandColors, $color), "dark");
+  }
+  li.arrow:hover a {
+    background-color: map_get(map_get($brandColors, $color), "dark");
+  }
+  li.unavailable a {
+    color: scale-color(map_get(map_get($brandColors, $color), "dark"), $lightness: 60%);
+  }
+}
+
+::selection { 
+  @include selection-dynamics($selectionColor);
+}
+::-moz-selection { 
+  @include selection-dynamics($selectionColor);
+}
+
+.alert-box {
+  border-radius: $global-radius;
+  line-height: 48px;
+  text-align: left;
+  padding: 0;
+  border: none;
+  font-size: inherit;
+  i {
+      width: 48px;
+      height: 48px;
+      margin: 0 16px 0 0;
+      vertical-align: top;
+      display: inline-block;
+      text-align: center;
+      padding-top: 16px;
+      border-top-left-radius: $global-radius;
+      border-bottom-left-radius: $global-radius;
+      top: 0;
+  }
+  .alert-box-content {
+    background-color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    border-top: none;
+    border-bottom-left-radius: $global-radius;
+    border-bottom-right-radius: $global-radius;
+    padding: 16px;
+  }
+  .close {
+    top: 25px;
+  }
+  &.with-details > i {
+      border-bottom-left-radius: 0px;
+  }
+
+  @include alert-dynamics($alert-primary-color);
+  &.defualt {
+    @include alert-dynamics($alert-default-color);
+  }
+  &.info {
+    @include alert-dynamics($alert-info-color);
+  }
+  &.danger {
+    @include alert-dynamics($alert-danger-color);
+  }
+}
+
+ul {
+  li {
+    list-style: none;
+    &:before {
+      color: map_get(map_get($brandColors, "green"), "normal");
+      content: "•";
+      padding-right: 10px;
+      margin-left: -10px;
+    }
+  }
+}
+
+ul.pagination {
+  li:before {
+      content: "";margin: 0; padding: 0;
+  }  
+//  @include pagination-dynamics("blue");
+  // min-height: rem-calc(30);
+  // li {
+  //   height: auto;
+  // }
+  // li > a {
+  //   padding: 0;
+  //   margin: rem-calc(5);
+  //   width: rem-calc(20);
+  //   height: rem-calc(20);
+  //   text-align: center;
+  //   line-height: rem-calc(20);
+  // }
+  // li:not(.arrow):not(:nth-child(2)) {
+  //   margin-left: 0;
+  // }
+  // li:not(.arrow) > a {
+  //   border-radius: 50%;
+  // }
+  // li:nth-last-child(2) {
+  //   border-top-right-radius: $global-radius;
+  //   border-bottom-right-radius: $global-radius;
+  // }
+  // li:nth-child(2) {
+  //   border-top-left-radius: $global-radius;
+  //   border-bottom-left-radius: $global-radius;
+  // }
+  // li.arrow {
+  //   border-radius: $global-radius;
+  // }
+  // li.arrow:hover a {
+  //   border-radius: 50%;
+  // }
+  a, button {
+    @include no-transition();
+  }
+}
+
+
+
