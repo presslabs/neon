@@ -1,0 +1,23 @@
+image: node0.10
+
+script:
+  - sudo chown -R ubuntu:ubuntu /home/ubuntu/.npm
+  - sudo chown -R ubuntu:ubuntu /home/ubuntu/.node_modules
+  - sudo apt-get install python-pip rubygems
+  - sudo gem install sass -v 3.3.10
+  - npm install -g bower
+  - npm install -g grunt
+  - npm install -g grunt-cli
+  - npm install
+  - bower install
+  - grunt dist
+
+deploy:
+  bash:
+    script:
+      - sudo pip install git+https://github.com/s3tools/s3cmd.git@v1.5.0-rc1#egg=s3cmd python-dateutil
+      - s3cmd --access_key=$aws_key --secret_key=$aws_secret --bucket-location=EU --delete-removed --no-mime-magic -P -F sync ./www/ s3://neon.presslabs.net/${CI_BRANCH-unbuilt}/
+
+cache:
+  - /home/ubuntu/.npm
+  - /home/ubuntu/.node_modules
