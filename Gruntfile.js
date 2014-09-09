@@ -65,6 +65,23 @@ module.exports = function(grunt) {
         }
     },    
 
+    'string-replace': {
+      dist: {
+        files: {
+          'bower_components/foundation/scss/foundation/_functions.scss': 'bower_components/foundation/scss/foundation/_functions.scss'
+        },
+        options: {
+          replacements: [{
+            pattern: '@if (index($modules, $name) == false) {',
+            replacement: '@if (not index($modules, $name)) {'
+          }, {
+            pattern: '$modules: append($modules, $name);',
+            replacement: '$modules: append($modules, $name) !global;'
+          }]
+        }
+      }
+    },
+
     // Watcher
     watch: {
       styles: {
@@ -83,8 +100,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-string-replace');
 
-  grunt.registerTask('vendor', ['sass:dist']);
+  grunt.registerTask('vendor', ['string-replace', 'sass:dist']);
   grunt.registerTask('minify', ['cssmin:combine']);
   grunt.registerTask('fonts', ['copy:iconmoon']);
   grunt.registerTask('javascripts', ['copy:js']);
