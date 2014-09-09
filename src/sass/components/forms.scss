@@ -15,7 +15,7 @@ $form-option-padding: 0 0 0 4px;
     padding: $form-option-padding;
 }
 
-@mixin form-option-base($type: "checkbox", $inline: false) {
+@mixin form-option-base($type: "checkbox", $inline: true) {
     @if $inline == true {
         display: inline-block;
     } @else {
@@ -110,6 +110,25 @@ $form-option-padding: 0 0 0 4px;
     //     }
     // }
 
+    input[type="radio"],
+    input[type="checkbox"] {
+        position: absolute;
+        left: 0px;
+        top: 4px;
+        margin: 0;
+    }
+
+    label {
+        font-size: $rem-base;
+    }
+
+    label[data-option] {
+        padding-left: $form-spacing*1.5;
+        position: relative;
+        display: inline-block;
+        margin: 0 $form-spacing $form-spacing 0;
+    }
+
     input[type="text"],
     input[type="password"],
     input[type="date"],
@@ -124,7 +143,7 @@ $form-option-padding: 0 0 0 4px;
     input[type="time"],
     input[type="url"],
     input[type="submit"],
-    button, select, .button {
+    button, select, .button, textarea {
         border-radius: $input-border-radius;
         @include no-transition();
     }
@@ -184,7 +203,7 @@ $form-option-padding: 0 0 0 4px;
             padding: $form-spacing/2 $form-spacing;
             display: block;
             margin: 0px;
-            line-height: rem-calc(21);
+            line-height: rem-calc(23);
             white-space: nowrap;
         }
         > i:after,
@@ -205,7 +224,7 @@ $form-option-padding: 0 0 0 4px;
         button, .button {
             margin: 0;
             padding: $form-spacing/2 $form-spacing;
-            line-height: rem-calc(21);
+            line-height: rem-calc(23);
         }
     }
 

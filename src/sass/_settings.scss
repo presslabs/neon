@@ -130,17 +130,17 @@ $brandColors: (
 //     );
 
 $icons: (
-    "arrow_back": "\e600",
-    "arrow_carrot-down": "\e601",
-    "arrow_carrot-left": "\e602",
-    "arrow_carrot-right_alt2": "\e603",
-    "arrow_carrot-right": "\e604",
-    "arrow_carrot-up_alt2": "\e605",
-    "arrow_carrot-up": "\e606",
-    "arrow_triangle-down_alt2": "\e607",
-    "arrow_triangle-left_alt2": "\e608",
-    "arrow_triangle-right_alt2": "\e609",
-    "arrow_triangle-up_alt2": "\e60a",
+    "icon_arrow_back": "\e600",
+    "icon_arrow_carrot-down": "\e601",
+    "icon_arrow_carrot-left": "\e602",
+    "icon_arrow_carrot-right_alt2": "\e603",
+    "icon_arrow_carrot-right": "\e604",
+    "icon_arrow_carrot-up_alt2": "\e605",
+    "icon_arrow_carrot-up": "\e606",
+    "icon_arrow_triangle-down_alt2": "\e607",
+    "icon_arrow_triangle-left_alt2": "\e608",
+    "icon_arrow_triangle-right_alt2": "\e609",
+    "icon_arrow_triangle-up_alt2": "\e60a",
     "icon_archive_alt": "\e60b",
     "icon_check_alt2": "\e60c",
     "icon_check": "\e60d",
@@ -171,11 +171,11 @@ $icons: (
     "icon_star_alt": "\e626",
     "icon_tools": "\e627",
     "icon_wallet": "\e628",
-    "social_facebook": "\e629",
-    "social_googleplus": "\e62a",
-    "social_tumblr": "\e62b",
-    "social_twitter": "\e62c",
-    "social_wordpress_circle": "\e62d");
+    "icon_social_facebook": "\e629",
+    "icon_social_googleplus": "\e62a",
+    "icon_social_tumblr": "\e62b",
+    "icon_social_twitter": "\e62c",
+    "icon_social_wordpress_circle": "\e62d");
 
 $form-spacing: rem-calc(16);
 
@@ -305,7 +305,7 @@ $h1-font-size: rem-calc(54);
 $h2-font-size: rem-calc(48);
 $h3-font-size: rem-calc(36);
 $h4-font-size: rem-calc(24);
-$h5-font-size: rem-calc(16);
+$h5-font-size: rem-calc(18);
 $h6-font-size: 1rem;
 
 // We use these to control header size reduction on small screens
@@ -696,7 +696,7 @@ $button-bg: $brandPrimary;
 // $form-label-bottom-margin: 0;
 // $input-font-family: inherit;
 // $input-font-color: rgba(0,0,0,0.75);
-$input-font-size: rem-calc(14);
+$input-font-size: rem-calc(16);
 // $input-bg-color: #fff;
 // $input-focus-bg-color: scale-color(#fff, $lightness: -2%);
 $input-border-color: scale-color(#fff, $lightness: -20%);

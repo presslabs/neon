@@ -45,11 +45,21 @@
 }
 
 article {
-    padding: 50px;
+    padding: $rem-base;
     border: 1px solid #f5f5f5;
-    margin-bottom: 50px;
+    margin-bottom: $rem-base*2.5;
+}
+
+.columns {
+    margin-bottom: $form-spacing*3;
 }
 
 hr {
-    margin: 100px 0;
+    margin: $rem-base*5 0;
+}
+
+@media #{$medium-up} {
+    article {
+        padding: $rem-base*2;
+    }
 }

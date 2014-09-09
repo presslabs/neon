@@ -3,9 +3,9 @@
 $button-border-width: rem-calc(4);
 $button-padding: rem-calc(8);
 
-$button-primary-color: "green";
+$button-primary-color: "blue";
 $button-default-color: "gray";
-$button-info-color: "blue";
+$button-info-color: "green";
 $button-danger-color: "orange";
 
 @mixin button-boder($color) {
@@ -64,6 +64,15 @@ $button-danger-color: "orange";
         }
         &.info {
             @include button-dynamics($button-info-color);
+        }
+    }
+    [disabled], .button.disabled {
+        background-color: map_get(map_get($brandColors, "gray"), "light");
+        border-color: map_get(map_get($brandColors, "gray"), "normal");
+        cursor: not-allowed;
+        &:hover {
+            background-color: map_get(map_get($brandColors, "gray"), "light");
+            border-color: map_get(map_get($brandColors, "gray"), "lighter");
         }
     }
 }

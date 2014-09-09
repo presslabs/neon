@@ -31,8 +31,13 @@
         .tab-title {
             position: relative;
             margin-bottom: -1px !important;
+            text-transform: uppercase;
             > a {
                 border-radius: 0px;
+                padding: $rem-base/2 $rem-base*2;
+                &:focus {
+                    outline: none;
+                }
             }
             &:first-child > a {
                 border-top-left-radius: $global-radius;
@@ -45,6 +50,7 @@
             border-bottom-color: transparent;
         }
         &.vertical {
+            border-bottom: none;
             .tab-title {
                 position: relative;
                 margin-bottom: 0px !important;
@@ -56,6 +62,7 @@
                     border-top-left-radius: $global-radius;
                 }
                 &:last-child > a {
+                    border-radius: 0;
                     border-bottom-left-radius: $global-radius;
                 }
             }
@@ -68,4 +75,9 @@
             margin-bottom: 0;
         }
     }
+    .tabs-content [tab-index],
+    .tabs-content [tabindex], {
+        outline: none !important;
+    }
+
 }

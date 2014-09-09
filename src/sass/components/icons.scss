@@ -12,7 +12,7 @@
 }
 
 @include exports("icons") {
-    [class^="icon-"], [class*=" icon-"] {
+    i[class^="icon_"], i[class*=" icon_"] {
         font-family: 'icomoon4';   
         speak: none;
         font-style: normal;
@@ -25,7 +25,7 @@
     }
 
     @each $name, $content in $icons {
-        .icon-#{$name}:before {
+        .#{$name}:before {
             content: "#{$content}";
         }
     }

@@ -8,14 +8,17 @@ $alert-danger-color: "orange";
 $selectionColor: "green";
 
 @mixin alert-dynamics($color) {
-  background-color: scale-color(map_get(map_get($brandColors, $color), "normal"), $lightness: 80%);
-  color: map_get(map_get($brandColors, $color), "dark");
+  background-color: map_get(map_get($brandColors, $color), "light");
+  color: map_get(map_get($brandColors, $color), "darker");
   i {
-      background-color: map_get(map_get($brandColors, $color), "dark");
-      color: scale-color(map_get(map_get($brandColors, $color), "normal"), $lightness: 80%);
+      background-color: map_get(map_get($brandColors, $color), "normal");
+      color: scale-color(map_get(map_get($brandColors, $color), "light"), $lightness: 50%);
   }  
   .alert-box-content {
-    border-color: scale-color(map_get(map_get($brandColors, $color), "normal"), $lightness: 80%);
+    border-color: map_get(map_get($brandColors, $color), "light");
+  }
+  .close {
+    color: map_get(map_get($brandColors, $color), "normal");
   }
 }
 
@@ -65,22 +68,30 @@ $selectionColor: "green";
 
 .alert-box {
   border-radius: $global-radius;
-  line-height: 48px;
   text-align: left;
   padding: 0;
+  padding: $rem-base $rem-base*2 $rem-base $rem-base*4;
   border: none;
-  font-size: inherit;
+  font-size: $rem-base;
+  position: relative;
+  line-height: $rem-base*1.4;
   i {
-      width: 48px;
-      height: 48px;
-      margin: 0 16px 0 0;
+      // width: $rem-base*3;
+      // height: $rem-base*3;
+      margin: 0 $rem-base 0 0;
       vertical-align: top;
-      display: inline-block;
+      display: block;
       text-align: center;
-      padding-top: 16px;
+      padding: $rem-base;
       border-top-left-radius: $global-radius;
       border-bottom-left-radius: $global-radius;
+      position: absolute;
+      line-height: $rem-base*1.4;
+      font-size: $rem-base; 
       top: 0;
+      left: 0;
+      bottom: 0;
+      height: 100%;
   }
   .alert-box-content {
     background-color: #fff;
@@ -89,10 +100,26 @@ $selectionColor: "green";
     border-top: none;
     border-bottom-left-radius: $global-radius;
     border-bottom-right-radius: $global-radius;
-    padding: 16px;
+    padding: $rem-base;
+    margin-top: $rem-base;
+    margin-left: -$rem-base;
+    margin-right: -($rem-base*2);
+    margin-bottom: -$rem-base;
+    ul:last-child, p:last-child {
+      margin-bottom: 0;
+    }
   }
   .close {
-    top: 25px;
+    display: block;
+    position: absolute;
+    top: -3px;
+    right: 0;
+    height: $rem-base*1.4;
+    line-height: $rem-base*1.4;
+    padding: $rem-base;
+    font-size: 24px; 
+    opacity: 1;
+    margin: 0;
   }
   &.with-details > i {
       border-bottom-left-radius: 0px;
@@ -110,14 +137,31 @@ $selectionColor: "green";
   }
 }
 
+h1, h2, h3, h4, h5, h6 {
+  small {
+    padding-left: $rem-base/2;
+    font-weight: 200;
+  }
+}
+
+ul, ol {
+  margin-left: $rem-base*2;
+}
+
 ul {
   li {
     list-style: none;
+    position: relative;
     &:before {
       color: map_get(map_get($brandColors, "green"), "normal");
       content: "•";
-      padding-right: 10px;
-      margin-left: -10px;
+      position: absolute;
+      margin-left: -$rem-base;
+    }
+  }
+  &.list-unstyled {
+    li:before {
+      content: "";
     }
   }
 }
