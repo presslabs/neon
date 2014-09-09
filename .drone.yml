@@ -4,7 +4,7 @@ script:
   - sudo chown -R ubuntu:ubuntu /home/ubuntu/.npm
   - sudo chown -R ubuntu:ubuntu /home/ubuntu/.node_modules
   - sudo apt-get install python-pip rubygems
-  - sudo gem install sass -v 3.3.10
+  - sudo gem install sass
   - npm install -g bower
   - npm install -g grunt
   - npm install -g grunt-cli
