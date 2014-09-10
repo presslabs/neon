@@ -12,7 +12,7 @@
 }
 
 @include exports("icons") {
-    i[class^="icon_"], i[class*=" icon_"] {
+    i[class^="icon-"], i[class*=" icon-"] {
         font-family: 'icomoon4';   
         speak: none;
         font-style: normal;
