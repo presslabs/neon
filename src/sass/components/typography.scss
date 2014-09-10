@@ -166,6 +166,13 @@ ul {
   }
 }
 
+blockquote {
+  padding: rem-calc(10 20);
+  cite {
+    font-size: rem-calc(14);
+  }
+}
+
 ul.pagination {
   li:before {
       content: "";margin: 0; padding: 0;
