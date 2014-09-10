@@ -493,12 +493,12 @@
 <div class="show-code">
 <a href="#" class="button tiny"><i class="icon-flowchart"></i> Button text</a>
 <a href="#" class="button small"><i class="icon-tools"></i> Button text</a>
-<a href="#" class="button"><i class="icon-icon-social-wordpress"></i> Button text</a>
+<a href="#" class="button"><i class="icon-social-wordpress"></i> Button text</a>
 <a href="#" class="button large"><i class="icon-drive"></i> Button text</a>
 
 <a href="#" class="button tiny"><i class="icon-flowchart"></i></a>
 <a href="#" class="button small"><i class="icon-tools"></i></a>
-<a href="#" class="button"><i class="icon-icon-social-wordpress"></i></a>
+<a href="#" class="button"><i class="icon-social-wordpress"></i></a>
 <a href="#" class="button large"><i class="icon-drive"></i></a>
 </div>
               </div>
@@ -816,14 +816,13 @@
   <li class="arrow"><a href="#"><i class="icon-arrow-carrot-right"></i></a></li>
 </ul>  
 </div>
-          
+
         </article>
 
     </div>
   </div>
 
   <script type="text/javascript" src="dist/js/jquery.min.js"></script>
-  <script type="text/javascript" src="highlight.pack.js"></script>
   <script type="text/javascript" src="dist/js/modernizr.js"></script>
   <script type="text/javascript" src="dist/js/underscore.js"></script>
   <script type="text/javascript" src="dist/js/foundation.min.js"></script>
@@ -834,12 +833,16 @@
         return false; 
       });
       $('.show-code').each(function() {
-        var code = _.escape($(this).html());
-        $(this).after('<pre><code class="html">' + code + '</code></pre>');
+        var self = $(this),
+            code = self.html();
+        $.ajax({
+          url: "parse.php",
+          data: { data: code }
+        }).done(function(data) {
+          self.after(data);
+        });
       });
   </script>
-
- <script>hljs.initHighlightingOnLoad();</script>  
   <script type="text/javascript" src="dist/js/neon.min.js"></script>
 
 </body>

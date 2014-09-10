@@ -89,19 +89,20 @@ $syntax-sass-color: "orange";
 @include exports("syntaxes") {
 
   code {
-    padding: rem_calc(3) rem_calc(6);
     border-radius: $global-radius;
     // border-color: scale-color(map_get(map_get($brandColors, "green"), "normal"), $lightness: 70%);
     font-size: rem_calc(14);
+    padding: rem-calc(2 6);
   }
 
   pre {
-    margin-bottom: $form-spacing;
+    // margin-bottom: $form-spacing;
     code {
       border-width: 1px;
       border-style: solid;
       border-radius: $global-radius;
-      font-size: 12px;
+      padding: $form-spacing;
+      font-size: rem_calc(12);
       line-height: 160%;
 
       @include syntax-colors($base: "green", $keyword: "brown", $string: "green", $attribute: "brown", $class: "blue", $number: "orange", $comment: "gray", $default: "blue");
@@ -111,7 +112,6 @@ $syntax-sass-color: "orange";
   .hljs {
     display: block;
     overflow-x: auto;
-    padding: $global-radius;
   }
 
   .hljs-comment, .hljs-template_comment, .diff .hljs-header, .hljs-javadoc {

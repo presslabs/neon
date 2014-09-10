@@ -25,7 +25,6 @@
   ],
   "dependencies": {
     "foundation": "latest",
-    "underscore": "latest",
     "normalize.css": "latest"
   }
 }
