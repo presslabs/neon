@@ -24,6 +24,7 @@ $button-danger-color: "orange";
 
 @mixin button-dynamics($color) {
     background-color: map_get(map_get($brandColors, $color), "normal");
+    color: #fff;
     @include button-boder($color);
     @include no-transition();
     &:focus {
