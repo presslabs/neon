@@ -225,6 +225,7 @@ $form-option-padding: 0 0 0 4px;
             margin: 0;
             padding: $form-spacing/2 $form-spacing;
             line-height: rem-calc(23);
+            white-space: nowrap;
         }
     }
 
@@ -252,5 +253,11 @@ $form-option-padding: 0 0 0 4px;
                 border-bottom-left-radius: 0;
             }
         }
+    }
+
+    .help-text {
+        color: #999;
+        margin-top: rem-calc(-8);
+        font-style: italic;
     }
 }

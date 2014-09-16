@@ -9,6 +9,9 @@
 @import "../../bower_components/foundation/scss/foundation/components/tabs";
 @import "../../bower_components/foundation/scss/foundation/components/type";
 
+@import "../../bower_components/foundation/scss/foundation/components/top-bar";
+@import "../../bower_components/foundation/scss/foundation/components/side-nav";
+
 @import "components/typography";
 @import "components/syntaxes";
 @import "components/icons";
@@ -16,6 +19,7 @@
 @import "components/buttons";
 @import "components/tables";
 @import "components/tabs";
+@import "components/navs";
 
 .palette {
     ul {

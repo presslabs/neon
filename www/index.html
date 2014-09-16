@@ -23,6 +23,33 @@
 </head>
 <body>
 
+<!--   <nav class="top-bar" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="#">neon</a></h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+    </ul>
+
+    <section class="top-bar-section">
+      <ul class="right">
+        <li><a href="#">Menu Item 1</a></li>
+        <li><a href="#">Menu Item 2</a></li>
+        <li><a href="#">Menu Item 3</a></li>
+        <li class="has-dropdown">
+          <a href="#">Main Item 4</a>
+          <ul class="dropdown">
+            <li><a href="#">Dropdown Option</a></li>
+            <li><a href="#">Dropdown Option</a></li>
+            <li><a href="#">Dropdown Option</a></li>
+            <li class="divider"></li>
+            <li><a href="#">See all &rarr;</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </nav>
+ -->
   <div class="row">
     <div class="small-12 large-12 columns">
 
@@ -143,54 +170,134 @@
             <p><strong>Cras vehicula</strong> in justo <em>non mollias</em>. Ut eros tellus, pulvinar vitae cursus vitae, tincidunt ut lacus. Aliquam et tempor diam. Pellentesque scelerisque nibh in dapibus egestas. Vestibulum porttitor non massa luctus malesuada. Morbi pellentesque blandit tincidunt. Suspendisse faucibus consequat gravida. Etiam quis sagittis eros, vitae bibendum nisl.</p>
         </article>
         
-        <h4 class="subheader">Unsorted list</h4>
+        <h4 class="subheader">Unsorted standard list</h4>
         <article>
-          <ul>
-            <li>List item with a much longer description or more content.</li>
-            <li>List item</li>
-            <li>List item
-              <ul>
-                <li>Nested List Item</li>
-                <li>Nested List Item</li>
-                <li>Nested List Item</li>
-              </ul>
-            </li>
-            <li>List item</li>
-            <li>List item</li>
-            <li>List item</li>
-          </ul>
-          <ul class="pl-green">
-            <li>List item with a much longer description or more content.</li>
-            <li>List item</li>
-            <li>List item
-              <ul>
-                <li>Nested List Item</li>
-                <li>Nested List Item</li>
-                <li>Nested List Item</li>
-              </ul>
-            </li>
-            <li>List item</li>
-            <li>List item</li>
-            <li>List item</li>
-          </ul>
+<ul>
+  <li>List item with a much longer description or more content.</li>
+  <li>List item</li>
+  <li>List item
+    <ul>
+      <li>Nested List Item</li>
+      <li>Nested List Item
+        <ul>
+          <li>Nested List Item</li>
+          <li>Nested List Item</li>
+          <li>Nested List Item</li>
+        </ul>
+      </li>
+      <li>Nested List Item</li>
+    </ul>
+  </li>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+</ul><pre><code class="html hljs"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item with a much longer description or more content.<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Nested List Item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Nested List Item
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Nested List Item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Nested List Item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Nested List Item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Nested List Item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></code></pre>
+
+        </article>
+        <h4 class="subheader">Unsorted branded list</h4>
+        <article>
+
+<ul class="bullets">
+  <li>List item with a much longer description or more content.</li>
+  <li>List item</li>
+  <li>List item
+    <ul>
+      <li>Nested List Item</li>
+      <li>Nested List Item
+        <ul>
+          <li>Nested List Item</li>
+          <li>Nested List Item</li>
+          <li>Nested List Item
+            <ul>
+              <li>Nested List Item</li>
+              <li>Nested List Item</li>
+              <li>Nested List Item</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Nested List Item</li>
+    </ul>
+  </li>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+</ul><pre><code class="html hljs"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bullets&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item with a much longer description or more content.<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Nested List Item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Nested List Item
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Nested List Item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Nested List Item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Nested List Item
+            <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Nested List Item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Nested List Item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Nested List Item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Nested List Item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></code></pre>
         </article>
 
         <h4 class="subheader">Ordered list</h4>
         <article>
-          <ol>
-            <li>List item with a much longer description or more content.</li>
-            <li>List item</li>
-            <li>List item
-              <ul>
-                <li>Nested List Item</li>
-                <li>Nested List Item</li>
-                <li>Nested List Item</li>
-              </ul>
-            </li>
-            <li>List item</li>
-            <li>List item</li>
-            <li>List item</li>
-          </ol>
+<ol>
+  <li>List item with a much longer description or more content.</li>
+  <li>List item</li>
+  <li>List item
+    <ul>
+      <li>Nested List Item</li>
+      <li>Nested List Item</li>
+      <li>Nested List Item</li>
+    </ul>
+  </li>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+</ol><pre><code class="html hljs"><span class="hljs-tag">&lt;<span class="hljs-title">ol</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item with a much longer description or more content.<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Nested List Item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Nested List Item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Nested List Item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ol</span>&gt;</span></code></pre>
         </article>
 
         <h4 class="subheader">Denominated list</h4>
@@ -220,7 +327,7 @@
         <section>
 
         <article>
-          <ul class="list-unstyled">
+          <ul class="unstyled">
             <li><i class="icon-arrow-back"></i> <code>.icon-arrow-back</code></li>
             <li><i class="icon-arrow-carrot-down"></i> <code>.icon-arrow-carrot-down</code></li>
             <li><i class="icon-arrow-carrot-left"></i> <code>.icon-arrow-carrot-left</code></li>
@@ -463,26 +570,26 @@
               <div class="small-12 large-4 columns">
                 <p>Input with suffix icon</p>
 
-  <div class="group">
-    <input type="text" placeholder="Enter your URL...">
-    <sub><i class="icon-tools"></i></sub>
-  </div><pre><code class="html hljs">  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;group&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;Enter your URL...&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">sub</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;icon-tools&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">sub</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+<div class="group">
+  <input type="text" placeholder="Enter your URL...">
+  <sub><i class="icon-tools"></i></sub>
+</div><pre><code class="html hljs"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;group&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;Enter your URL...&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">sub</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;icon-tools&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">sub</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
 
               </div>
               <div class="small-12 large-4 columns">
 
                 <p>Input with suffix <code>&lt;button&gt;</code> element</p>
 
-  <div class="group">
-    <input type="text" placeholder="Enter your email address">
-    <sub><button type="submit"><i class="icon-mail"></i></button></sub>
-  </div><pre><code class="html hljs">  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;group&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;Enter your email address&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">sub</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;submit&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;icon-mail&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">sub</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+<div class="group">
+  <input type="text" placeholder="Enter your email address">
+  <sub><button type="submit"><i class="icon-mail"></i></button></sub>
+</div><pre><code class="html hljs"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;group&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;Enter your email address&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">sub</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;submit&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;icon-mail&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">sub</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
 
               </div>
               <div class="small-12 large-4 columns">
@@ -948,52 +1055,226 @@
           <article>
 
 <ul class="tabs" data-tab="">
-  <li class="tab-title active"><a href="#panel2-1">Start</a></li>
-  <li class="tab-title"><a href="#panel2-2">Step 2</a></li>
-  <li class="tab-title"><a href="#panel2-3">Step 3</a></li>
-  <li class="tab-title"><a href="#panel2-4">Final step</a></li>
+  <li class="tab-title active"><a href="#panel2-1">General settings</a></li>
+  <li class="tab-title"><a href="#panel2-2">Privacy</a></li>
+  <li class="tab-title"><a href="#panel2-3">Security</a></li>
+  <li class="tab-title"><a href="#panel2-4">Account</a></li>
 </ul>
-<div class="tabs-content">
-  <div class="content active" id="panel2-1">
-    <p>First panel content goes here...</p>
+<form action="#">
+  <div class="tabs-content">
+    <div class="content active" id="panel2-1">
+      <div class="row">
+        <div class="large-12 columns">
+          <h4>General settings</h4>
+          <p>First panel content goes here...</p>
+        </div>
+        <div class="large-6 columns">
+          <label for="first_name">First name</label>
+          <input type="text" placeholder="First name" id="first_name">
+          <p class="help-text"><i class="icon-info"></i> Some explanatory text can go in here</p>
+        </div>
+        <div class="large-6 columns">
+          <label for="last_name">Last name</label>
+          <input type="text" placeholder="Last name" id="last_name">
+          <p class="help-text">Some explanatory text can go in here</p>
+        </div>
+        <div class="large-12 columns">
+          <input type="submit" class="button" value="Save">
+          <input type="submit" class="button info" value="Preview">
+          <input type="submit" class="button info" value="Reset">
+          <input type="submit" class="button danger" value="Cancel">        
+        </div>        
+      </div>
+    </div>
+    <div class="content" id="panel2-2">
+      <div class="row">
+        <div class="large-12 columns">
+          <h4>Privacy settings</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ipsum odio, iaculis vel felis elementum, auctor tincidunt mauris. Curabitur elementum massa sed libero placerat, vitae faucibus lacus posuere. Integer a mauris quis sapien rhoncus laoreet. Praesent feugiat, mi quis mattis tincidunt, erat elit fringilla urna, vitae viverra dolor felis quis libero. Fusce lobortis massa quis nibh commodo scelerisque. Curabitur fermentum, nisl ut porta convallis, massa nunc congue lacus, nec faucibus nibh tortor ac nisl. Nunc risus justo, sollicitudin sed luctus dignissim, ultrices at turpis.</p>
+        </div>
+        <div class="large-12 columns">
+          <div class="group">
+            <input type="text" placeholder="Enter DELETE to confirm">
+            <sub><button type="submit" class="danger"><i class="icon-close-circle"></i> Flush cache</button></sub>
+          </div>
+          <p class="help-text">You have to enter DELETE text and then press Flush cache to confirm</p>
+        </div>
+        <div class="large-12 columns">
+          <input type="submit" class="button" value="Save">
+          <input type="submit" class="button info" value="Reset">
+          <input type="submit" class="button danger" value="Cancel">        
+        </div>
+      </div>
+    </div>
+    <div class="content" id="panel2-3">
+      <div class="row">
+        <div class="large-12 columns">
+          <h4>Password change</h4>
+          <p>First panel content goes here...</p>
+        </div>
+        <div class="large-12 columns">
+          <label for="first_name">Enter password</label>
+          <input type="password" id="first_name">
+        </div>
+        <div class="large-12 columns">
+          <label for="last_name">Confirm password</label>
+          <input type="password" id="last_name">
+        </div>
+        <div class="large-12 columns">
+          <div class="pass-strength-indicator">
+            Strength indicator
+            <br><br>
+          </div>
+        </div>
+        <div class="large-12 columns">
+          <input type="submit" class="button" value="Save">
+          <input type="submit" class="button danger" value="Cancel">        
+        </div>
+      </div>
+    </div>
+    <div class="content" id="panel2-4">
+      <div class="row">
+        <div class="large-12 columns">
+          <h4>General settings</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ipsum odio, iaculis vel felis elementum, auctor tincidunt mauris. Curabitur elementum massa sed libero placerat, vitae faucibus lacus posuere. Integer a mauris quis sapien rhoncus laoreet. Praesent feugiat, mi quis mattis tincidunt, erat elit fringilla urna, vitae viverra dolor felis quis libero. Fusce lobortis massa quis nibh commodo scelerisque. Curabitur fermentum, nisl ut porta convallis, massa nunc congue lacus, nec faucibus nibh tortor ac nisl. Nunc risus justo, sollicitudin sed luctus dignissim, ultrices at turpis.</p>
+        </div>
+        <div class="large-12 columns">
+          <label for="first_name">First name</label>
+          <input type="text" placeholder="First name" id="first_name">
+        </div>
+        <div class="large-12 columns">
+          <label for="last_name">Last name</label>
+          <input type="text" placeholder="Last name" id="last_name">
+        </div>
+        <div class="large-12 columns">
+          <div class="row collapse">
+            <label for="domain">Domain</label>
+            <div class="group">
+              <input type="text" placeholder="Enter domain" id="domain">
+              <sub><span>.com</span></sub>
+            </div>
+          </div>
+        </div>
+        <div class="large-12 columns">
+          <input type="submit" class="button" value="Save">
+          <input type="submit" class="button info" value="Preview">
+          <input type="submit" class="button info" value="Reset">
+          <input type="submit" class="button danger" value="Cancel">        
+        </div>        
+      </div>
+    </div>
   </div>
-  <div class="content" id="panel2-2">
-    <p>Second panel content goes here...</p>
-  </div>
-  <div class="content" id="panel2-3">
-    <p>Third panel content goes here...</p>
-  </div>
-  <div class="content" id="panel2-4">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ipsum odio, iaculis vel felis elementum, auctor tincidunt mauris. Curabitur elementum massa sed libero placerat, vitae faucibus lacus posuere. Integer a mauris quis sapien rhoncus laoreet. Praesent feugiat, mi quis mattis tincidunt, erat elit fringilla urna, vitae viverra dolor felis quis libero. Fusce lobortis massa quis nibh commodo scelerisque. Curabitur fermentum, nisl ut porta convallis, massa nunc congue lacus, nec faucibus nibh tortor ac nisl. Nunc risus justo, sollicitudin sed luctus dignissim, ultrices at turpis.</p>
-    <p>Ut sit amet aliquet leo. Donec eu hendrerit ante. Cras vestibulum justo sed felis scelerisque mattis. Sed nec tortor ut nibh suscipit blandit. Nulla facilisi. Nulla imperdiet, erat et varius rutrum, lectus nisl auctor magna, sit amet lacinia ante urna sed turpis. Nunc tincidunt vitae mi vitae rutrum. Ut pellentesque turpis sed dui ullamcorper, eget accumsan ante posuere. Cras quis iaculis metus, sit amet feugiat purus. Suspendisse auctor massa nec odio tempus mattis. Nullam at est sed mi fringilla molestie et id neque. Phasellus ac venenatis tortor, iaculis tincidunt lorem. Nulla lectus erat, pretium vel posuere sed, imperdiet quis lacus.</p>
-    <p>Sed ac lorem vel tellus tempus feugiat. Phasellus ultricies, felis ac scelerisque ultrices, orci sapien fringilla tellus, vel aliquet orci enim pulvinar ipsum. Cras faucibus, turpis at adipiscing tristique, erat erat tempus nulla, et pellentesque sem eros et lectus. Fusce volutpat sit amet justo at feugiat. Vivamus nec elit id tortor semper aliquet. Pellentesque pretium sem semper elementum ornare. Vivamus dapibus sapien id lacinia fringilla. Maecenas fringilla sapien sed adipiscing mattis. Nullam rhoncus eu felis eu gravida. Sed pretium sodales fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean mollis vehicula sollicitudin. Aliquam a suscipit ligula. Mauris tincidunt urna quis quam mollis, mattis lobortis tortor faucibus.</p>
-    <p>In viverra, ipsum vitae tristique ultrices, dui elit dignissim libero, in pharetra augue tortor vel sapien. Fusce id egestas ipsum. Nulla sem mi, sodales ut dignissim quis, suscipit at velit. Suspendisse potenti. Nulla et nibh volutpat, mollis dui a, dapibus nibh. Integer nec tortor non erat tristique volutpat. Curabitur pretium pulvinar nulla, vehicula mattis mauris ultricies sit amet. Nam viverra nulla a iaculis hendrerit. Integer id odio dolor. Duis consequat bibendum lectus pretium bibendum. Sed consectetur nunc felis, sit amet tristique urna ullamcorper non. Ut gravida nisi elementum ipsum tempus, eget accumsan nibh luctus. Morbi vitae sagittis urna, vitae sollicitudin diam.</p>
-    <p>In hac habitasse platea dictumst. Nullam gravida tempor posuere. Suspendisse neque magna, dapibus laoreet mi in, congue aliquet justo. In vitae diam diam. Fusce bibendum non augue eget varius. Morbi metus elit, ornare molestie elit ut, elementum adipiscing dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed vel sapien nec lorem ullamcorper tempus. Sed purus sem, ornare id lacus vitae, fringilla ullamcorper leo. Suspendisse id pellentesque elit, et pulvinar sem. Praesent consectetur erat ut nisi semper fringilla. Nulla lobortis malesuada urna sit amet pellentesque.</p>
-  </div>
-</div><pre><code class="html hljs"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tabs&quot;</span> <span class="hljs-attribute">data-tab</span>=<span class="hljs-value">&quot;&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tab-title active&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#panel2-1&quot;</span>&gt;</span>Start<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tab-title&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#panel2-2&quot;</span>&gt;</span>Step 2<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tab-title&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#panel2-3&quot;</span>&gt;</span>Step 3<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tab-title&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#panel2-4&quot;</span>&gt;</span>Final step<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+</form><pre><code class="html hljs"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tabs&quot;</span> <span class="hljs-attribute">data-tab</span>=<span class="hljs-value">&quot;&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tab-title active&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#panel2-1&quot;</span>&gt;</span>General settings<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tab-title&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#panel2-2&quot;</span>&gt;</span>Privacy<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tab-title&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#panel2-3&quot;</span>&gt;</span>Security<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tab-title&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#panel2-4&quot;</span>&gt;</span>Account<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tabs-content&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;content active&quot;</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;panel2-1&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>First panel content goes here...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">action</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tabs-content&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;content active&quot;</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;panel2-1&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;large-12 columns&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>General settings<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>First panel content goes here...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;large-6 columns&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;first_name&quot;</span>&gt;</span>First name<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;First name&quot;</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;first_name&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;help-text&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;icon-info&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span> Some explanatory text can go in here<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;large-6 columns&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;last_name&quot;</span>&gt;</span>Last name<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;Last name&quot;</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;last_name&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;help-text&quot;</span>&gt;</span>Some explanatory text can go in here<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;large-12 columns&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;submit&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;Save&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;submit&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button info&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;Preview&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;submit&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button info&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;Reset&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;submit&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button danger&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;Cancel&quot;</span>&gt;</span>        
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>        
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;content&quot;</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;panel2-2&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;large-12 columns&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Privacy settings<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ipsum odio, iaculis vel felis elementum, auctor tincidunt mauris. Curabitur elementum massa sed libero placerat, vitae faucibus lacus posuere. Integer a mauris quis sapien rhoncus laoreet. Praesent feugiat, mi quis mattis tincidunt, erat elit fringilla urna, vitae viverra dolor felis quis libero. Fusce lobortis massa quis nibh commodo scelerisque. Curabitur fermentum, nisl ut porta convallis, massa nunc congue lacus, nec faucibus nibh tortor ac nisl. Nunc risus justo, sollicitudin sed luctus dignissim, ultrices at turpis.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;large-12 columns&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;group&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;Enter DELETE to confirm&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">sub</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;submit&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;danger&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;icon-close-circle&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span> Flush cache<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">sub</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;help-text&quot;</span>&gt;</span>You have to enter DELETE text and then press Flush cache to confirm<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;large-12 columns&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;submit&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;Save&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;submit&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button info&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;Reset&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;submit&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button danger&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;Cancel&quot;</span>&gt;</span>        
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;content&quot;</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;panel2-3&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;large-12 columns&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Password change<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>First panel content goes here...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;large-12 columns&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;first_name&quot;</span>&gt;</span>Enter password<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;password&quot;</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;first_name&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;large-12 columns&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;last_name&quot;</span>&gt;</span>Confirm password<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;password&quot;</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;last_name&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;large-12 columns&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;pass-strength-indicator&quot;</span>&gt;</span>
+            Strength indicator
+            <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;large-12 columns&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;submit&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;Save&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;submit&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button danger&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;Cancel&quot;</span>&gt;</span>        
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;content&quot;</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;panel2-4&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;large-12 columns&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>General settings<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ipsum odio, iaculis vel felis elementum, auctor tincidunt mauris. Curabitur elementum massa sed libero placerat, vitae faucibus lacus posuere. Integer a mauris quis sapien rhoncus laoreet. Praesent feugiat, mi quis mattis tincidunt, erat elit fringilla urna, vitae viverra dolor felis quis libero. Fusce lobortis massa quis nibh commodo scelerisque. Curabitur fermentum, nisl ut porta convallis, massa nunc congue lacus, nec faucibus nibh tortor ac nisl. Nunc risus justo, sollicitudin sed luctus dignissim, ultrices at turpis.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;large-12 columns&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;first_name&quot;</span>&gt;</span>First name<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;First name&quot;</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;first_name&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;large-12 columns&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;last_name&quot;</span>&gt;</span>Last name<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;Last name&quot;</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;last_name&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;large-12 columns&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row collapse&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;domain&quot;</span>&gt;</span>Domain<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;group&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;Enter domain&quot;</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;domain&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">sub</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>.com<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">sub</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;large-12 columns&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;submit&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;Save&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;submit&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button info&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;Preview&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;submit&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button info&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;Reset&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;submit&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button danger&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;Cancel&quot;</span>&gt;</span>        
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>        
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;content&quot;</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;panel2-2&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Second panel content goes here...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;content&quot;</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;panel2-3&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Third panel content goes here...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;content&quot;</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;panel2-4&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ipsum odio, iaculis vel felis elementum, auctor tincidunt mauris. Curabitur elementum massa sed libero placerat, vitae faucibus lacus posuere. Integer a mauris quis sapien rhoncus laoreet. Praesent feugiat, mi quis mattis tincidunt, erat elit fringilla urna, vitae viverra dolor felis quis libero. Fusce lobortis massa quis nibh commodo scelerisque. Curabitur fermentum, nisl ut porta convallis, massa nunc congue lacus, nec faucibus nibh tortor ac nisl. Nunc risus justo, sollicitudin sed luctus dignissim, ultrices at turpis.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Ut sit amet aliquet leo. Donec eu hendrerit ante. Cras vestibulum justo sed felis scelerisque mattis. Sed nec tortor ut nibh suscipit blandit. Nulla facilisi. Nulla imperdiet, erat et varius rutrum, lectus nisl auctor magna, sit amet lacinia ante urna sed turpis. Nunc tincidunt vitae mi vitae rutrum. Ut pellentesque turpis sed dui ullamcorper, eget accumsan ante posuere. Cras quis iaculis metus, sit amet feugiat purus. Suspendisse auctor massa nec odio tempus mattis. Nullam at est sed mi fringilla molestie et id neque. Phasellus ac venenatis tortor, iaculis tincidunt lorem. Nulla lectus erat, pretium vel posuere sed, imperdiet quis lacus.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Sed ac lorem vel tellus tempus feugiat. Phasellus ultricies, felis ac scelerisque ultrices, orci sapien fringilla tellus, vel aliquet orci enim pulvinar ipsum. Cras faucibus, turpis at adipiscing tristique, erat erat tempus nulla, et pellentesque sem eros et lectus. Fusce volutpat sit amet justo at feugiat. Vivamus nec elit id tortor semper aliquet. Pellentesque pretium sem semper elementum ornare. Vivamus dapibus sapien id lacinia fringilla. Maecenas fringilla sapien sed adipiscing mattis. Nullam rhoncus eu felis eu gravida. Sed pretium sodales fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean mollis vehicula sollicitudin. Aliquam a suscipit ligula. Mauris tincidunt urna quis quam mollis, mattis lobortis tortor faucibus.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>In viverra, ipsum vitae tristique ultrices, dui elit dignissim libero, in pharetra augue tortor vel sapien. Fusce id egestas ipsum. Nulla sem mi, sodales ut dignissim quis, suscipit at velit. Suspendisse potenti. Nulla et nibh volutpat, mollis dui a, dapibus nibh. Integer nec tortor non erat tristique volutpat. Curabitur pretium pulvinar nulla, vehicula mattis mauris ultricies sit amet. Nam viverra nulla a iaculis hendrerit. Integer id odio dolor. Duis consequat bibendum lectus pretium bibendum. Sed consectetur nunc felis, sit amet tristique urna ullamcorper non. Ut gravida nisi elementum ipsum tempus, eget accumsan nibh luctus. Morbi vitae sagittis urna, vitae sollicitudin diam.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>In hac habitasse platea dictumst. Nullam gravida tempor posuere. Suspendisse neque magna, dapibus laoreet mi in, congue aliquet justo. In vitae diam diam. Fusce bibendum non augue eget varius. Morbi metus elit, ornare molestie elit ut, elementum adipiscing dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed vel sapien nec lorem ullamcorper tempus. Sed purus sem, ornare id lacus vitae, fringilla ullamcorper leo. Suspendisse id pellentesque elit, et pulvinar sem. Praesent consectetur erat ut nisi semper fringilla. Nulla lobortis malesuada urna sit amet pellentesque.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span></code></pre>
 
         </article>
         
@@ -1084,6 +1365,110 @@
 
         </article>
       </section>
+
+        <hr>
+        <h2>Navigation</h2>
+
+      <section>
+        <article>
+
+<nav class="top-bar" data-topbar="">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#">neon</a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li><a href="#">Menu Item 1</a></li>
+      <li><a href="#">Menu Item 2</a></li>
+      <li><a href="#">Menu Item 3</a></li>
+      <li class="has-dropdown">
+        <a href="#">Main Item 4</a>
+        <ul class="dropdown">
+          <li><a href="#">Dropdown Option</a></li>
+          <li><a href="#">Dropdown Option</a></li>
+          <li><a href="#">Dropdown Option</a></li>
+          <li class="divider"></li>
+          <li><a href="#">See all &#x2192;</a></li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+</nav><pre><code class="html hljs"><span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;top-bar&quot;</span> <span class="hljs-attribute">data-topbar</span>=<span class="hljs-value">&quot;&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;title-area&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;name&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>neon<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;toggle-topbar menu-icon&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>Menu<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;top-bar-section&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;right&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>Menu Item 1<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>Menu Item 2<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>Menu Item 3<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;has-dropdown&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>Main Item 4<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;dropdown&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>Dropdown Option<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>Dropdown Option<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>Dropdown Option<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;divider&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>See all &amp;#x2192;<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span></code></pre>
+
+        </article>
+      </section>
+
+        <hr>
+        <h2>Side navigation</h2>
+
+      <section>
+        <article>
+            <div class="row">
+              <div class="large-6 columns">
+                <p>Regular side navigation with divider</p>
+<ul class="side-nav">
+  <li class="active"><a href="#">Link 1</a></li>
+  <li><a href="#">Link 2</a></li>
+  <li class="divider"></li>
+  <li><a href="#">Link 3</a></li>
+  <li><a href="#">Link 4</a></li>
+</ul>      <pre><code class="html hljs"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;side-nav&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;active&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>Link 1<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>Link 2<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;divider&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>Link 3<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>Link 4<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>      </code></pre>
+
+              </div>
+              <div class="large-6 columns">
+                <p>Side navigation with icons and no divider</p>
+<ul class="side-nav">
+  <li class="active"><a href="#"><i class="icon-social-wordpress"></i> Link 1</a></li>
+  <li><a href="#"><i class="icon-link"></i> Link 2</a></li>
+  <li><a href="#"><i class="icon-mail"></i> Link 3</a></li>
+  <li><a href="#"><i class="icon-star"></i> Link 4</a></li>
+</ul>      <pre><code class="html hljs"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;side-nav&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;active&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;icon-social-wordpress&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span> Link 1<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;icon-link&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span> Link 2<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;icon-mail&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span> Link 3<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;icon-star&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span> Link 4<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>      </code></pre>
+
+              </div>
+            </div>
+        </article>
+      </section>
+
     </div>
   </div>
 

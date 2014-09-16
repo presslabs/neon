@@ -1,0 +1,9 @@
+@import "settings";
+
+@include exports("navs") {
+    .side-nav {
+        i {
+            color: #666;
+        }
+    }
+}

@@ -23,6 +23,33 @@
 </head>
 <body>
 
+<!--   <nav class="top-bar" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="#">neon</a></h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+    </ul>
+
+    <section class="top-bar-section">
+      <ul class="right">
+        <li><a href="#">Menu Item 1</a></li>
+        <li><a href="#">Menu Item 2</a></li>
+        <li><a href="#">Menu Item 3</a></li>
+        <li class="has-dropdown">
+          <a href="#">Main Item 4</a>
+          <ul class="dropdown">
+            <li><a href="#">Dropdown Option</a></li>
+            <li><a href="#">Dropdown Option</a></li>
+            <li><a href="#">Dropdown Option</a></li>
+            <li class="divider"></li>
+            <li><a href="#">See all &rarr;</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </nav>
+ -->
   <div class="row">
     <div class="small-12 large-12 columns">
 
@@ -143,54 +170,83 @@
             <p><strong>Cras vehicula</strong> in justo <em>non mollias</em>. Ut eros tellus, pulvinar vitae cursus vitae, tincidunt ut lacus. Aliquam et tempor diam. Pellentesque scelerisque nibh in dapibus egestas. Vestibulum porttitor non massa luctus malesuada. Morbi pellentesque blandit tincidunt. Suspendisse faucibus consequat gravida. Etiam quis sagittis eros, vitae bibendum nisl.</p>
         </article>
         
-        <h4 class="subheader">Unsorted list</h4>
+        <h4 class="subheader">Unsorted standard list</h4>
         <article>
-          <ul>
-            <li>List item with a much longer description or more content.</li>
-            <li>List item</li>
-            <li>List item
-              <ul>
-                <li>Nested List Item</li>
-                <li>Nested List Item</li>
-                <li>Nested List Item</li>
-              </ul>
-            </li>
-            <li>List item</li>
-            <li>List item</li>
-            <li>List item</li>
-          </ul>
-          <ul class="pl-green">
-            <li>List item with a much longer description or more content.</li>
-            <li>List item</li>
-            <li>List item
-              <ul>
-                <li>Nested List Item</li>
-                <li>Nested List Item</li>
-                <li>Nested List Item</li>
-              </ul>
-            </li>
-            <li>List item</li>
-            <li>List item</li>
-            <li>List item</li>
-          </ul>
+<!-- code -->
+<ul>
+  <li>List item with a much longer description or more content.</li>
+  <li>List item</li>
+  <li>List item
+    <ul>
+      <li>Nested List Item</li>
+      <li>Nested List Item
+        <ul>
+          <li>Nested List Item</li>
+          <li>Nested List Item</li>
+          <li>Nested List Item</li>
+        </ul>
+      </li>
+      <li>Nested List Item</li>
+    </ul>
+  </li>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+</ul>
+<!-- endcode -->
+
+        </article>
+        <h4 class="subheader">Unsorted branded list</h4>
+        <article>
+
+<!-- code -->
+<ul class="bullets">
+  <li>List item with a much longer description or more content.</li>
+  <li>List item</li>
+  <li>List item
+    <ul>
+      <li>Nested List Item</li>
+      <li>Nested List Item
+        <ul>
+          <li>Nested List Item</li>
+          <li>Nested List Item</li>
+          <li>Nested List Item
+            <ul>
+              <li>Nested List Item</li>
+              <li>Nested List Item</li>
+              <li>Nested List Item</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Nested List Item</li>
+    </ul>
+  </li>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+</ul>
+<!-- endcode -->
         </article>
 
         <h4 class="subheader">Ordered list</h4>
         <article>
-          <ol>
-            <li>List item with a much longer description or more content.</li>
-            <li>List item</li>
-            <li>List item
-              <ul>
-                <li>Nested List Item</li>
-                <li>Nested List Item</li>
-                <li>Nested List Item</li>
-              </ul>
-            </li>
-            <li>List item</li>
-            <li>List item</li>
-            <li>List item</li>
-          </ol>
+<!-- code -->
+<ol>
+  <li>List item with a much longer description or more content.</li>
+  <li>List item</li>
+  <li>List item
+    <ul>
+      <li>Nested List Item</li>
+      <li>Nested List Item</li>
+      <li>Nested List Item</li>
+    </ul>
+  </li>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+</ol>
+<!-- endcode -->
         </article>
 
         <h4 class="subheader">Denominated list</h4>
@@ -220,7 +276,7 @@
         <section>
 
         <article>
-          <ul class="list-unstyled">
+          <ul class="unstyled">
             <li><i class="icon-arrow-back"></i> <code>.icon-arrow-back</code></li>
             <li><i class="icon-arrow-carrot-down"></i> <code>.icon-arrow-carrot-down</code></li>
             <li><i class="icon-arrow-carrot-left"></i> <code>.icon-arrow-carrot-left</code></li>
@@ -425,10 +481,10 @@
                 <p>Input with suffix icon</p>
 
 <!-- code -->
-  <div class="group">
-    <input type="text" placeholder="Enter your URL...">
-    <sub><i class="icon-tools"></i></sub>
-  </div>
+<div class="group">
+  <input type="text" placeholder="Enter your URL...">
+  <sub><i class="icon-tools"></i></sub>
+</div>
 <!-- endcode -->
 
               </div>
@@ -437,10 +493,10 @@
                 <p>Input with suffix <code>&lt;button&gt;</code> element</p>
 
 <!-- code -->
-  <div class="group">
-    <input type="text" placeholder="Enter your email address">
-    <sub><button type="submit"><i class="icon-mail"></i></button></sub>
-  </div>
+<div class="group">
+  <input type="text" placeholder="Enter your email address">
+  <sub><button type="submit"><i class="icon-mail"></i></button></sub>
+</div>
 <!-- endcode -->
 
               </div>
@@ -776,29 +832,116 @@
 
 <!-- code -->
 <ul class="tabs" data-tab>
-  <li class="tab-title active"><a href="#panel2-1">Start</a></li>
-  <li class="tab-title"><a href="#panel2-2">Step 2</a></li>
-  <li class="tab-title"><a href="#panel2-3">Step 3</a></li>
-  <li class="tab-title"><a href="#panel2-4">Final step</a></li>
+  <li class="tab-title active"><a href="#panel2-1">General settings</a></li>
+  <li class="tab-title"><a href="#panel2-2">Privacy</a></li>
+  <li class="tab-title"><a href="#panel2-3">Security</a></li>
+  <li class="tab-title"><a href="#panel2-4">Account</a></li>
 </ul>
-<div class="tabs-content">
-  <div class="content active" id="panel2-1">
-    <p>First panel content goes here...</p>
+<form action="#">
+  <div class="tabs-content">
+    <div class="content active" id="panel2-1">
+      <div class="row">
+        <div class="large-12 columns">
+          <h4>General settings</h4>
+          <p>First panel content goes here...</p>
+        </div>
+        <div class="large-6 columns">
+          <label for="first_name">First name</label>
+          <input type="text" placeholder="First name" id="first_name" />
+          <p class="help-text"><i class="icon-info"></i> Some explanatory text can go in here</p>
+        </div>
+        <div class="large-6 columns">
+          <label for="last_name">Last name</label>
+          <input type="text" placeholder="Last name" id="last_name" />
+          <p class="help-text">Some explanatory text can go in here</p>
+        </div>
+        <div class="large-12 columns">
+          <input type="submit" class="button" value="Save">
+          <input type="submit" class="button info" value="Preview">
+          <input type="submit" class="button info" value="Reset">
+          <input type="submit" class="button danger" value="Cancel">        
+        </div>        
+      </div>
+    </div>
+    <div class="content" id="panel2-2">
+      <div class="row">
+        <div class="large-12 columns">
+          <h4>Privacy settings</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ipsum odio, iaculis vel felis elementum, auctor tincidunt mauris. Curabitur elementum massa sed libero placerat, vitae faucibus lacus posuere. Integer a mauris quis sapien rhoncus laoreet. Praesent feugiat, mi quis mattis tincidunt, erat elit fringilla urna, vitae viverra dolor felis quis libero. Fusce lobortis massa quis nibh commodo scelerisque. Curabitur fermentum, nisl ut porta convallis, massa nunc congue lacus, nec faucibus nibh tortor ac nisl. Nunc risus justo, sollicitudin sed luctus dignissim, ultrices at turpis.</p>
+        </div>
+        <div class="large-12 columns">
+          <div class="group">
+            <input type="text" placeholder="Enter DELETE to confirm">
+            <sub><button type="submit" class="danger"><i class="icon-close-circle"></i> Flush cache</button></sub>
+          </div>
+          <p class="help-text">You have to enter DELETE text and then press Flush cache to confirm</p>
+        </div>
+        <div class="large-12 columns">
+          <input type="submit" class="button" value="Save">
+          <input type="submit" class="button info" value="Reset">
+          <input type="submit" class="button danger" value="Cancel">        
+        </div>
+      </div>
+    </div>
+    <div class="content" id="panel2-3">
+      <div class="row">
+        <div class="large-12 columns">
+          <h4>Password change</h4>
+          <p>First panel content goes here...</p>
+        </div>
+        <div class="large-12 columns">
+          <label for="first_name">Enter password</label>
+          <input type="password" id="first_name" />
+        </div>
+        <div class="large-12 columns">
+          <label for="last_name">Confirm password</label>
+          <input type="password" id="last_name" />
+        </div>
+        <div class="large-12 columns">
+          <div class="pass-strength-indicator">
+            Strength indicator
+            <br/><br/>
+          </div>
+        </div>
+        <div class="large-12 columns">
+          <input type="submit" class="button" value="Save">
+          <input type="submit" class="button danger" value="Cancel">        
+        </div>
+      </div>
+    </div>
+    <div class="content" id="panel2-4">
+      <div class="row">
+        <div class="large-12 columns">
+          <h4>General settings</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ipsum odio, iaculis vel felis elementum, auctor tincidunt mauris. Curabitur elementum massa sed libero placerat, vitae faucibus lacus posuere. Integer a mauris quis sapien rhoncus laoreet. Praesent feugiat, mi quis mattis tincidunt, erat elit fringilla urna, vitae viverra dolor felis quis libero. Fusce lobortis massa quis nibh commodo scelerisque. Curabitur fermentum, nisl ut porta convallis, massa nunc congue lacus, nec faucibus nibh tortor ac nisl. Nunc risus justo, sollicitudin sed luctus dignissim, ultrices at turpis.</p>
+        </div>
+        <div class="large-12 columns">
+          <label for="first_name">First name</label>
+          <input type="text" placeholder="First name" id="first_name" />
+        </div>
+        <div class="large-12 columns">
+          <label for="last_name">Last name</label>
+          <input type="text" placeholder="Last name" id="last_name" />
+        </div>
+        <div class="large-12 columns">
+          <div class="row collapse">
+            <label for="domain">Domain</label>
+            <div class="group">
+              <input type="text" placeholder="Enter domain" id="domain" />
+              <sub><span>.com</span></sub>
+            </div>
+          </div>
+        </div>
+        <div class="large-12 columns">
+          <input type="submit" class="button" value="Save">
+          <input type="submit" class="button info" value="Preview">
+          <input type="submit" class="button info" value="Reset">
+          <input type="submit" class="button danger" value="Cancel">        
+        </div>        
+      </div>
+    </div>
   </div>
-  <div class="content" id="panel2-2">
-    <p>Second panel content goes here...</p>
-  </div>
-  <div class="content" id="panel2-3">
-    <p>Third panel content goes here...</p>
-  </div>
-  <div class="content" id="panel2-4">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ipsum odio, iaculis vel felis elementum, auctor tincidunt mauris. Curabitur elementum massa sed libero placerat, vitae faucibus lacus posuere. Integer a mauris quis sapien rhoncus laoreet. Praesent feugiat, mi quis mattis tincidunt, erat elit fringilla urna, vitae viverra dolor felis quis libero. Fusce lobortis massa quis nibh commodo scelerisque. Curabitur fermentum, nisl ut porta convallis, massa nunc congue lacus, nec faucibus nibh tortor ac nisl. Nunc risus justo, sollicitudin sed luctus dignissim, ultrices at turpis.</p>
-    <p>Ut sit amet aliquet leo. Donec eu hendrerit ante. Cras vestibulum justo sed felis scelerisque mattis. Sed nec tortor ut nibh suscipit blandit. Nulla facilisi. Nulla imperdiet, erat et varius rutrum, lectus nisl auctor magna, sit amet lacinia ante urna sed turpis. Nunc tincidunt vitae mi vitae rutrum. Ut pellentesque turpis sed dui ullamcorper, eget accumsan ante posuere. Cras quis iaculis metus, sit amet feugiat purus. Suspendisse auctor massa nec odio tempus mattis. Nullam at est sed mi fringilla molestie et id neque. Phasellus ac venenatis tortor, iaculis tincidunt lorem. Nulla lectus erat, pretium vel posuere sed, imperdiet quis lacus.</p>
-    <p>Sed ac lorem vel tellus tempus feugiat. Phasellus ultricies, felis ac scelerisque ultrices, orci sapien fringilla tellus, vel aliquet orci enim pulvinar ipsum. Cras faucibus, turpis at adipiscing tristique, erat erat tempus nulla, et pellentesque sem eros et lectus. Fusce volutpat sit amet justo at feugiat. Vivamus nec elit id tortor semper aliquet. Pellentesque pretium sem semper elementum ornare. Vivamus dapibus sapien id lacinia fringilla. Maecenas fringilla sapien sed adipiscing mattis. Nullam rhoncus eu felis eu gravida. Sed pretium sodales fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean mollis vehicula sollicitudin. Aliquam a suscipit ligula. Mauris tincidunt urna quis quam mollis, mattis lobortis tortor faucibus.</p>
-    <p>In viverra, ipsum vitae tristique ultrices, dui elit dignissim libero, in pharetra augue tortor vel sapien. Fusce id egestas ipsum. Nulla sem mi, sodales ut dignissim quis, suscipit at velit. Suspendisse potenti. Nulla et nibh volutpat, mollis dui a, dapibus nibh. Integer nec tortor non erat tristique volutpat. Curabitur pretium pulvinar nulla, vehicula mattis mauris ultricies sit amet. Nam viverra nulla a iaculis hendrerit. Integer id odio dolor. Duis consequat bibendum lectus pretium bibendum. Sed consectetur nunc felis, sit amet tristique urna ullamcorper non. Ut gravida nisi elementum ipsum tempus, eget accumsan nibh luctus. Morbi vitae sagittis urna, vitae sollicitudin diam.</p>
-    <p>In hac habitasse platea dictumst. Nullam gravida tempor posuere. Suspendisse neque magna, dapibus laoreet mi in, congue aliquet justo. In vitae diam diam. Fusce bibendum non augue eget varius. Morbi metus elit, ornare molestie elit ut, elementum adipiscing dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed vel sapien nec lorem ullamcorper tempus. Sed purus sem, ornare id lacus vitae, fringilla ullamcorper leo. Suspendisse id pellentesque elit, et pulvinar sem. Praesent consectetur erat ut nisi semper fringilla. Nulla lobortis malesuada urna sit amet pellentesque.</p>
-  </div>
-</div>
+</form>
 <!-- endcode -->
 
         </article>
@@ -859,6 +1002,80 @@
 
         </article>
       </section>
+
+        <hr/>
+        <h2>Navigation</h2>
+
+      <section>
+        <article>
+
+<!-- code -->
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#">neon</a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="right">
+      <li><a href="#">Menu Item 1</a></li>
+      <li><a href="#">Menu Item 2</a></li>
+      <li><a href="#">Menu Item 3</a></li>
+      <li class="has-dropdown">
+        <a href="#">Main Item 4</a>
+        <ul class="dropdown">
+          <li><a href="#">Dropdown Option</a></li>
+          <li><a href="#">Dropdown Option</a></li>
+          <li><a href="#">Dropdown Option</a></li>
+          <li class="divider"></li>
+          <li><a href="#">See all &rarr;</a></li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+</nav>
+<!-- endcode -->
+
+        </article>
+      </section>
+
+        <hr/>
+        <h2>Side navigation</h2>
+
+      <section>
+        <article>
+            <div class="row">
+              <div class="large-6 columns">
+                <p>Regular side navigation with divider</p>
+<!-- code -->
+<ul class="side-nav">
+  <li class="active"><a href="#">Link 1</a></li>
+  <li><a href="#">Link 2</a></li>
+  <li class="divider"></li>
+  <li><a href="#">Link 3</a></li>
+  <li><a href="#">Link 4</a></li>
+</ul>      
+<!-- endcode -->
+
+              </div>
+              <div class="large-6 columns">
+                <p>Side navigation with icons and no divider</p>
+<!-- code -->
+<ul class="side-nav">
+  <li class="active"><a href="#"><i class="icon-social-wordpress"></i> Link 1</a></li>
+  <li><a href="#"><i class="icon-link"></i> Link 2</a></li>
+  <li><a href="#"><i class="icon-mail"></i> Link 3</a></li>
+  <li><a href="#"><i class="icon-star"></i> Link 4</a></li>
+</ul>      
+<!-- endcode -->
+
+              </div>
+            </div>
+        </article>
+      </section>
+
     </div>
   </div>
 

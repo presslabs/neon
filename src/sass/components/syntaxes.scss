@@ -89,10 +89,12 @@ $syntax-sass-color: "orange";
 @include exports("syntaxes") {
 
   code {
+    @include syntax-base($color: "green");
     border-radius: $global-radius;
-    // border-color: scale-color(map_get(map_get($brandColors, "green"), "normal"), $lightness: 70%);
-    font-size: rem_calc(14);
+    color: map_get(map_get($brandColors, "blue"), "normal");
+    font-size: rem_calc(12);
     padding: rem-calc(2 6);
+
   }
 
   pre {

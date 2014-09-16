@@ -148,7 +148,7 @@ ul, ol {
   margin-left: $rem-base*2;
 }
 
-ul {
+ul.bullets {
   li {
     list-style: none;
     position: relative;
@@ -159,11 +159,15 @@ ul {
       margin-left: -$rem-base;
     }
   }
-  &.list-unstyled {
-    li:before {
-      content: "";
-    }
-  }
+  li li:before { opacity: .7; }
+  li li li:before { opacity: .5; }
+  li li li li:before { opacity: .3; }
+}
+
+ul.unstyled {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 blockquote {

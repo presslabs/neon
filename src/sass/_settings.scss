@@ -961,13 +961,13 @@ $pagination-margin: rem-calc(-5);
 $pagination-li-float: left;
 $pagination-li-height: rem-calc(24);
 $pagination-li-font-color: #222;
-$pagination-li-font-size: rem-calc(14);
+$pagination-li-font-size: rem-calc(16);
 $pagination-li-margin: rem-calc(5);
 
 // We use these for the pagination anchor links
 $pagination-link-pad: rem-calc(1 10 1);
 $pagination-link-font-color: #999;
-$pagination-link-active-bg: scale-color(#fff, $lightness: -10%);
+$pagination-link-active-bg: scale-color($primary-color, $lightness: 80%);
 
 // We use these for disabled anchor links
 $pagination-link-unavailable-cursor: default;
@@ -975,7 +975,7 @@ $pagination-link-unavailable-font-color: #999;
 $pagination-link-unavailable-bg-active: transparent;
 
 // We use these for currently selected anchor links
-$pagination-link-current-background: $brandPrimary;
+$pagination-link-current-background: $primary-color;
 $pagination-link-current-font-color: #fff;
 $pagination-link-current-font-weight: 400;
 $pagination-link-current-cursor: default;
@@ -1128,15 +1128,15 @@ $pagination-link-current-active-bg: $primary-color;
 // $side-nav-list-margin: rem-calc(0 0 7 0);
 
 // We use these to control link styles.
-// $side-nav-link-color: $primary-color;
-// $side-nav-link-color-active: scale-color($side-nav-link-color, $lightness: 30%);
+$side-nav-link-color: $primary-color;
+$side-nav-link-color-active: scale-color($side-nav-link-color, $lightness: -20%);
 // $side-nav-link-color-hover: scale-color($side-nav-link-color, $lightness: 30%);
-// $side-nav-link-bg-hover: hsla(0, 0, 0, 0.025);
+$side-nav-link-bg-hover: scale-color($side-nav-link-color, $lightness: 90%);
 // $side-nav-link-margin: 0;
 // $side-nav-link-padding: rem-calc(7 14);
-// $side-nav-font-size: rem-calc(14);
+$side-nav-font-size: rem-calc(16);
 // $side-nav-font-weight: $font-weight-normal;
-// $side-nav-font-weight-active: $side-nav-font-weight;
+// $side-nav-font-weight-active: 700;
 // $side-nav-font-family: $body-font-family;
 // $side-nav-active-font-family: $side-nav-font-family;
 
@@ -1361,8 +1361,8 @@ $tabs-content-margin-bottom: rem-calc(24);
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-// $topbar-bg-color: #333;
-// $topbar-bg: $topbar-bg-color;
+$topbar-bg-color: map_get(map_get($brandColors, "green"), "normal");
+$topbar-bg: $topbar-bg-color;
 
 // Height and margin
 // $topbar-height: 45px;
@@ -1373,25 +1373,25 @@ $tabs-content-margin-bottom: rem-calc(24);
 // $topbar-title-font-size: rem-calc(17);
 
 // Style the top bar dropdown elements
-// $topbar-dropdown-bg: #333;
-// $topbar-dropdown-link-color: #fff;
-// $topbar-dropdown-link-bg: #333;
-// $topbar-dropdown-link-weight: $font-weight-normal;
-// $topbar-dropdown-toggle-size: 5px;
-// $topbar-dropdown-toggle-color: #fff;
-// $topbar-dropdown-toggle-alpha: 0.4;
+$topbar-dropdown-bg: $topbar-bg-color;
+$topbar-dropdown-link-color: #fff;
+$topbar-dropdown-link-bg: $topbar-dropdown-bg;
+$topbar-dropdown-link-weight: $font-weight-normal;
+$topbar-dropdown-toggle-size: 5px;
+$topbar-dropdown-toggle-color: #fff;
+$topbar-dropdown-toggle-alpha: 0.4;
 
 // Set the link colors and styles for top-level nav
-// $topbar-link-color: #fff;
-// $topbar-link-color-hover: #fff;
-// $topbar-link-color-active: #fff;
-// $topbar-link-color-active-hover: #fff;
-// $topbar-link-weight: $font-weight-normal;
-// $topbar-link-font-size: rem-calc(13);
+$topbar-link-color: #fff;
+$topbar-link-color-hover: #fff;
+$topbar-link-color-active: #fff;
+$topbar-link-color-active-hover: #fff;
+$topbar-link-weight: $font-weight-normal;
+$topbar-link-font-size: rem-calc(16);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 // $topbar-link-bg: $topbar-bg;
-// $topbar-link-bg-color-hover: #555555;
-// $topbar-link-bg-hover: #272727;
+$topbar-link-bg-color-hover: scale-color($topbar-bg-color, $lightness: 30%);
+$topbar-link-bg-hover: scale-color($topbar-bg-color, $lightness: 10%);
 // $topbar-link-bg-active: $primary-color;
 // $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
 // $topbar-link-font-family: $body-font-family;
@@ -1401,11 +1401,11 @@ $tabs-content-margin-bottom: rem-calc(24);
 // $topbar-button-font-size: 0.75rem;
 // $topbar-button-top: 7px;
 
-// $topbar-dropdown-label-color: #777;
+$topbar-dropdown-label-color: scale-color($topbar-bg-color, $lightness: 30%);
 // $topbar-dropdown-label-text-transform: uppercase;
 // $topbar-dropdown-label-font-weight: $font-weight-bold;
 // $topbar-dropdown-label-font-size: rem-calc(10);
-// $topbar-dropdown-label-bg: #333;
+$topbar-dropdown-label-bg: $topbar-bg-color;
 
 // Top menu icon styles
 // $topbar-menu-link-transform: uppercase;
@@ -1413,8 +1413,8 @@ $tabs-content-margin-bottom: rem-calc(24);
 // $topbar-menu-link-weight: $font-weight-bold;
 // $topbar-menu-link-color: #fff;
 // $topbar-menu-icon-color: #fff;
-// $topbar-menu-link-color-toggled: #888;
-// $topbar-menu-icon-color-toggled: #888;
+$topbar-menu-link-color-toggled: scale-color($topbar-bg-color, $lightness: -30%);
+$topbar-menu-icon-color-toggled: scale-color($topbar-bg-color, $lightness: -30%);
 
 // Transitions and breakpoint styles
 // $topbar-transition-speed: 300ms;
@@ -1423,8 +1423,8 @@ $tabs-content-margin-bottom: rem-calc(24);
 // $topbar-media-query: $medium-up;
 
 // Divider Styles
-// $topbar-divider-border-bottom: solid 1px  scale-color($topbar-bg-color, $lightness: 13%);
-// $topbar-divider-border-top: solid 1px scale-color($topbar-bg-color, $lightness: -50%);
+$topbar-divider-border-bottom: solid 1px  scale-color($topbar-bg-color, $lightness: 10%);
+$topbar-divider-border-top: solid 1px scale-color($topbar-bg-color, $lightness: -10%);
 
 // Sticky Class
 // $topbar-sticky-class: ".sticky";
