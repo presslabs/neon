@@ -118,6 +118,10 @@ $form-option-padding: 0 0 0 4px;
         margin: 0;
     }
 
+    input[type="radio"] {
+        border-radius: 50%;
+    }
+
     label {
         font-size: $rem-base;
     }
