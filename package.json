@@ -28,6 +28,7 @@
     "grunt-contrib-sass": "^0.7.3",
     "grunt-contrib-uglify": "^0.5.0",
     "grunt-contrib-watch": "^0.6.1",
+    "grunt-highlight": "0.0.1",
     "grunt-string-replace": "^0.2.7"
   }
 }

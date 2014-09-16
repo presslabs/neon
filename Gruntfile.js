@@ -79,14 +79,36 @@ module.exports = function(grunt) {
             replacement: '$modules: append($modules, $name) !global;'
           }]
         }
+      },
+      code: {
+        files: {
+          'www/index.html': 'src/demo/index.html'
+        },
+        options: {
+          replacements: [{
+            pattern: /<!-- code -->[\r\n]*((.|[\r\n])*?)[\r\n]*<!-- endcode -->/ig,
+            replacement: '$1<pre><code class="html hljs">$1</code></pre>'
+          }]
+        }
+      }
+    },
+
+    highlight: {
+      code: {
+        options: {
+          lang: 'html'
+        },
+        files: {
+          'www/index.html': ['www/index.html'],
+        }
       }
     },
 
     // Watcher
     watch: {
       styles: {
-        files: ['src/sass/**/*.scss'],
-        tasks: ['sass:dist', 'cssmin:combine'],
+        files: ['src/sass/**/*.scss', 'src/demo/index.html'],
+        tasks: ['sass:dist', 'cssmin:combine', 'string-replace:code', 'highlight:code'],
         options: {
           nospawn: true
         }
@@ -101,14 +123,17 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-string-replace');
+  grunt.loadNpmTasks('grunt-highlight');  
 
-  grunt.registerTask('vendor', ['string-replace', 'sass:dist']);
+  grunt.registerTask('vendor', ['string-replace:dist', 'sass:dist']);
   grunt.registerTask('minify', ['cssmin:combine']);
   grunt.registerTask('fonts', ['copy:iconmoon']);
   grunt.registerTask('javascripts', ['copy:js']);
   grunt.registerTask('stylesheets', ['copy:css']);
   grunt.registerTask('uglifier', ['uglify:js']);
-  grunt.registerTask('dist', ['vendor', 'fonts', 'javascripts', 'stylesheets', 'minify', 'uglifier']);
+  grunt.registerTask('code', ['string-replace:code', 'highlight:code']);  
+
+  grunt.registerTask('dist', ['vendor', 'fonts', 'javascripts', 'stylesheets', 'minify', 'uglifier', 'code']);
   grunt.registerTask('default', ['watch']);
 
 };

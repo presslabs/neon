@@ -1,6 +1,7 @@
 // neon javascripts
 
 var neon = {message: "This is a perfect NEON light!"};
+
 var doc = document.documentElement;
 doc.setAttribute('data-useragent', navigator.userAgent);
 
