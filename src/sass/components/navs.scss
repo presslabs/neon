@@ -6,4 +6,10 @@
             color: #666;
         }
     }
+    .side-nav li > a { 
+        border-radius: $global-radius;
+    }
+    .side-nav .active > a {
+        background-color: scale-color(map_get(map_get($brandColors, "green"), "normal"), $lightness: 90%);
+    } 
 }
