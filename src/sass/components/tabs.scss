@@ -1,12 +1,14 @@
 @import "settings";
 
 @mixin tabs-dynamics($color) {
-  border-color: scale-color(map_get(map_get($brandColors, $color), "normal"), $lightness: 80%);
+  border-color: scale-color(map_get(map_get($brandColors, $color), "normal"), $lightness: 70%);
   .tab-title > a {
         background-color: scale-color(map_get(map_get($brandColors, $color), "normal"), $lightness: 80%);
         color: map_get(map_get($brandColors, $color), "dark");
+        border-color: scale-color(map_get(map_get($brandColors, $color), "normal"), $lightness: 70%) !important;
         &:hover {
             background-color: map_get(map_get($brandColors, $color), "light");
+            border-color: scale-color(map_get(map_get($brandColors, $color), "normal"), $lightness: 40%) !important;
         }
         &:active {
             background-color: map_get(map_get($brandColors, $color), "dark");
@@ -16,6 +18,7 @@
     .tab-title.active > a {
         background-color: map_get(map_get($brandColors, $color), "normal");
         color: scale-color(map_get(map_get($brandColors, $color), "normal"), $lightness: 80%);
+        border-color: map_get(map_get($brandColors, $color), "darker") !important;
     }
 }
 
@@ -31,39 +34,68 @@
         .tab-title {
             position: relative;
             margin-bottom: -1px !important;
+            margin-right: $rem-base/4;
             text-transform: uppercase;
             > a {
                 border-radius: 0px;
-                padding: $rem-base/2 $rem-base*2;
+                padding: $rem-base/2 $rem-base $rem-base/2;
+
+                border-top-left-radius: $global-radius;
+                border-top-right-radius: $global-radius;
+                border-bottom-width: 4px;
+                border-bottom-style: solid;
+
+                h5 {
+                    font-weight: 400;
+                    margin-left: rem-calc(8);
+                    font-size: rem-calc(16);
+                    display: inline;
+                }
+
+
                 &:focus {
                     outline: none;
                 }
             }
-            &:first-child > a {
-                border-top-left-radius: $global-radius;
+            &.active > a {
+                border-bottom-width: 4px;
+                border-bottom-style: solid;
+                > h5 {
+                    color: #fff;
+                }
             }
-            &:last-child > a {
-                border-top-right-radius: $global-radius;
+            &:last-child {
+                margin-right: 0;
             }
         }
         &:not(.vertical) .tab-title.active > a {
-            border-bottom-color: transparent;
+            // border-bottom-color: transparent;
         }
         &.vertical {
             border-bottom: none;
+            border-right-width: 1px;
+            border-right-style: solid;            
             .tab-title {
                 position: relative;
-                margin-bottom: 0px !important;
                 margin-right: -1px !important;
-                &.active > a {
-                    border-right-color: transparent;
-                }
-                &:first-child > a {
-                    border-top-left-radius: $global-radius;
-                }
-                &:last-child > a {
+                margin-bottom: $rem-base/4 !important;
+                > a {
                     border-radius: 0;
+                    border: none;
+                    border-top-left-radius: $global-radius;
                     border-bottom-left-radius: $global-radius;
+                    border-right-width: 4px;
+                    border-right-style: solid;                    
+                }
+
+                &.active > a {
+                    // border-right-color: transparent;
+                    border: none;
+                    border-right-width: 4px;
+                    border-right-style: solid;                    
+                }
+                &:last-child {
+                    margin-bottom: 0 !important;
                 }
             }
         }
@@ -79,5 +111,38 @@
     .tabs-content [tabindex], {
         outline: none !important;
     }
+
+    @media only screen and (max-width: 767px) {
+        .tabs:not(.vertical) .tab-title > a > h5 {
+            display: none;
+        }
+        // .tabs.vertical .tab-title > a > h5 {
+        //     display: inline;
+        // }
+        // .tabs {
+        //     border: none !important;
+        //     .tab-title {
+        //         display: block;
+        //         float: none;
+        //         width: 100%;
+        //         margin: 0;
+        //         margin-bottom: $rem-base/4 !important;
+        //         > a {
+        //             border-radius: 0 !important;
+        //         }
+        //         &:first-child > a {
+        //             border-top-left-radius: $global-radius !important;
+        //             border-top-right-radius: $global-radius !important;
+        //         }
+        //         &:last-child {
+        //             margin-bottom: 0 !important;
+        //             > a {
+        //                 border-bottom-left-radius: $global-radius !important;
+        //                 border-bottom-right-radius: $global-radius !important;
+        //             }
+        //         }
+        //     }
+        // }
+    }        
 
 }
