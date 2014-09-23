@@ -11,7 +11,8 @@ module.exports = function(grunt) {
           style: 'expanded'
         },
         files: {
-          'dist/css/neon.css': 'src/sass/neon.scss'
+          'dist/css/neon.css': 'src/sass/neon.scss',
+          'dist/css/green.css': 'src/sass/green.scss'
         }
       }
     },
@@ -22,6 +23,14 @@ module.exports = function(grunt) {
         cwd: 'src/fonts',
         src: '**/*',
         dest: 'dist/fonts/',
+        expand: true
+      },
+      html: {
+        src: [
+            'src/demo/green.html',
+          ],
+        dest: 'www/',
+        flatten: true,
         expand: true
       },
       css: {
@@ -52,7 +61,8 @@ module.exports = function(grunt) {
     cssmin: {
         combine: {
             files: {
-                'dist/css/neon.min.css': ['dist/css/normalize.css', 'dist/css/neon.css']
+                'dist/css/neon.min.css': ['dist/css/normalize.css', 'dist/css/neon.css'],
+                'dist/css/green.min.css': ['dist/css/neon.min.css', 'dist/css/green.css']
             }
         }
     },    
@@ -66,20 +76,6 @@ module.exports = function(grunt) {
     },    
 
     'string-replace': {
-      dist: {
-        files: {
-          'bower_components/foundation/scss/foundation/_functions.scss': 'bower_components/foundation/scss/foundation/_functions.scss'
-        },
-        options: {
-          replacements: [{
-            pattern: '@if (index($modules, $name) == false) {',
-            replacement: '@if (not index($modules, $name)) {'
-          }, {
-            pattern: '$modules: append($modules, $name);',
-            replacement: '$modules: append($modules, $name) !global;'
-          }]
-        }
-      },
       code: {
         files: {
           'www/index.html': 'src/demo/index.html'
@@ -107,8 +103,8 @@ module.exports = function(grunt) {
     // Watcher
     watch: {
       styles: {
-        files: ['src/sass/**/*.scss', 'src/demo/index.html'],
-        tasks: ['sass:dist', 'cssmin:combine', 'string-replace:code', 'highlight:code'],
+        files: ['src/sass/**/*.scss', 'src/demo/*.html'],
+        tasks: ['sass:dist', 'cssmin:combine', 'string-replace:code', 'highlight:code', 'copy:html'],
         options: {
           nospawn: true
         }
@@ -131,7 +127,7 @@ module.exports = function(grunt) {
   grunt.registerTask('javascripts', ['copy:js']);
   grunt.registerTask('stylesheets', ['copy:css']);
   grunt.registerTask('uglifier', ['uglify:js']);
-  grunt.registerTask('code', ['string-replace:code', 'highlight:code']);  
+  grunt.registerTask('code', ['string-replace:code', 'highlight:code', 'copy:html']);  
 
   grunt.registerTask('dist', ['vendor', 'fonts', 'javascripts', 'stylesheets', 'minify', 'uglifier', 'code']);
   grunt.registerTask('default', ['watch']);

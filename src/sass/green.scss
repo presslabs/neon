@@ -1,0 +1,11 @@
+@import "settings";
+@import "functions";
+
+body {
+    background-color: $brandPrimary;
+}
+
+h1 {
+    color: #fff;
+    font-weight: 100;
+}
