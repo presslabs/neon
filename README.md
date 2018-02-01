@@ -1,4 +1,6 @@
-## Neon [![Build Status](http://drone.presslabs.net/github.com/PressLabs/neon/status.svg?branch=master)](http://drone.presslabs.net/github.com/PressLabs/neon)
+## THIS PROJECT IS NO LONGER MAINTAINED
+
+## Neon
 
 The documentation will be here soon.
 
